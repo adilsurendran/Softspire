@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Softspire Technologies</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="New_style.css">
+    <script src="New_js.js"></script>
+
+</head>
+
+<body class="bg-white text-black">
+
+    <!-- ---------------- NAVBAR ---------------- -->
+    <nav class="w-full fixed top-0 left-0 z-50 bg-white shadow">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 py-4 flex justify-between items-center">
+            <div class="logo-box">
+                <img src="/assets/images/PNG-1.png" alt="Softspire Logo">
+            </div>
+
+            <div class="hidden lg:flex items-center gap-8 text-lg">
+                <a href="#" class="nav-link active-nav hover:text-softRed">Home</a>
+                <a href="#" class="nav-link hover:text-softRed">About</a>
+
+                <div class="relative group">
+                    <button class="hover:text-softRed flex items-center gap-1">
+                        Services <span class="text-xs mt-[2px]">▾</span>
+                    </button>
+
+                    <div class="dropdown-menu absolute left-0 top-full w-72 softRed-gradient text-white 
+                      shadow-2xl rounded-2xl py-4 backdrop-blur-md bg-opacity-90 
+                      opacity-0 invisible">
+
+                        <a href="#" class="dropdown-item block px-6 py-3 text-sm rounded-md">ERP Development</a>
+                        <a href="#" class="dropdown-item block px-6 py-3 text-sm rounded-md">CRM Systems</a>
+                        <a href="#" class="dropdown-item block px-6 py-3 text-sm rounded-md">Learning Management
+                            Systems</a>
+                        <a href="#" class="dropdown-item block px-6 py-3 text-sm rounded-md">Web Applications</a>
+                        <a href="#" class="dropdown-item block px-6 py-3 text-sm rounded-md">Mobile App Development</a>
+                        <a href="#" class="dropdown-item block px-6 py-3 text-sm rounded-md">E-commerce Solutions</a>
+
+                    </div>
+                </div>
+
+                <a href="#" class="nav-link hover:text-softRed">Career</a>
+                <a href="New_Contact.html" class="nav-link hover:text-softRed">Contact Us</a>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <a
+                    class="px-5 py-2 bg-softRed text-white rounded-full shadow hover:opacity-90 text-lg btn-glow-softRed">Lets
+                    Talk</a>
+            </div>
+
+            <button id="menuBtn" class="text-3xl text-softRed lg:hidden">☰</button>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu fixed top-0 left-0 h-full w-64 bg-white shadow-xl p-6 z-50 lg:hidden">
+
+            <button id="closeMenu" class="text-3xl text-softRed mb-6">✕</button>
+
+            <nav class="flex flex-col gap-6 text-xl">
+                <a href="#" class="hover:text-softRed">Home</a>
+                <a href="#" class="hover:text-softRed">About</a>
+
+                <div class="w-full">
+                    <button id="servicesBtn"
+                        class="w-full text-left flex justify-between items-center text-softRed font-semibold">
+                        Services
+                        <span id="servicesArrow" class="transition-transform">▾</span>
+                    </button>
+
+                    <div id="servicesMenu"
+                        class="hidden flex flex-col mt-3 gap-1 softRed-gradient text-white rounded-2xl p-4 backdrop-blur-md">
+
+                        <a href="#" class="dropdown-item py-2 px-3 rounded-md">ERP Development</a>
+                        <a href="#" class="dropdown-item py-2 px-3 rounded-md">CRM Systems</a>
+                        <a href="#" class="dropdown-item py-2 px-3 rounded-md">Learning Management Systems</a>
+                        <a href="#" class="dropdown-item py-2 px-3 rounded-md">Web Applications</a>
+                        <a href="#" class="dropdown-item py-2 px-3 rounded-md">Mobile App Development</a>
+                        <a href="#" class="dropdown-item py-2 px-3 rounded-md">E-commerce Solutions</a>
+
+                    </div>
+                </div>
+
+                <a href="#" class="hover:text-softRed">Career</a>
+                <a href="New_Contact.html" class="hover:text-softRed">Contact Us</a>
+
+                <a class="px-4 py-2 bg-softRed text-white rounded-full w-fit mt-2">Lets Talk</a>
+            </nav>
+        </div>
+
+    </nav>
+
+    <div id="overlay" class="overlay"></div>
+
+    <!-- ⭐⭐⭐ REPLACED HERO SECTION (Full Main + Section from your first design) ⭐⭐⭐ -->
+
+    <main class="relative w-full overflow-hidden pt-20 min-h-screen">
+
+        <section class="relative w-full min-h-[calc(100vh-96px)] flex items-center overflow-hidden">
+
+            <!-- ✅ DESKTOP: Original Curved Black Background (UNCHANGED) -->
+            <div
+                class="hidden lg:block absolute top-[0%] right-[-10%] w-[60%] h-[120%] bg-black rounded-l-[50%] z-0 transform scale-y-110 translate-y-[-5%] overflow-hidden">
+                <div
+                    class="absolute inset-0 opacity-20 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:20px_20px]">
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 items-center relative z-10 h-full">
+
+                <!-- LEFT CONTENT -->
+                <div class="space-y-8 pt-16 pb-20">
+                    <h1 class="text-5xl md:text-6xl lg:text-[4.5rem] font-extrabold leading-[1.1] text-black">
+                        Transform Your <br />
+                        Business with <br />
+                        <span class="text-primary drop-shadow-[0_0_15px_rgba(238,47,80,0.3)] text-shadow-flow py-3">
+                            Innovative Technology
+                        </span>
+                    </h1>
+
+                    <p class="text-gray-600 text-lg md:text-xl max-w-lg leading-relaxed font-medium">
+                        We create custom software solutions that drive growth, increase efficiency, and solve real
+                        business challenges. From enterprise systems to mobile apps - we turn your vision into reality.
+
+
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-6 pt-4">
+                        <button
+                            class="bg-primary hover:bg-primary-hover text-white px-10 py-4 rounded-full font-bold shadow-glow hover:shadow-glow-hover transition-all transform hover:-translate-y-1 text-lg">
+                            Get Started
+                        </button>
+                        <button
+                            class="bg-primary text-white px-10 py-4 rounded-full font-bold shadow-glow hover:shadow-glow-hover transition-all transform hover:-translate-y-1 text-lg">
+                            Explore Our Services
+                        </button>
+                    </div>
+
+                    <div class="space-y-4 pt-6">
+                        <div class="flex items-center gap-3 group">
+                            <div
+                                class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white shadow-glow">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span
+                                class="text-black font-semibold text-base group-hover:text-primary transition-colors">Trusted
+                                by 20+ Businesses Worldwide
+                            </span>
+                        </div>
+
+                        <div class="flex items-center gap-3 group">
+                            <div
+                                class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white shadow-glow">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="text-black font-semibold text-base group-hover:text-primary transition-colors">
+                                2+ Years Experience
+                            </span>
+                        </div>
+
+                        <div class="flex items-center gap-3 group">
+                            <div
+                                class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white shadow-glow">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="text-black font-semibold text-base group-hover:text-primary transition-colors">
+                                24/7 Support
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE (Illustration + Mobile Curved Shape) -->
+                <div class="relative h-full min-h-[520px] flex items-center justify-center lg:justify-end">
+
+                    <!-- ⭐ MOBILE: Reversed White Semi-Circle (Top Arc Shape) -->
+                    <div class="absolute -top-10 left-1/2 -translate-x-1/2 
+               w-[130%] h-[10%] 
+               bg-white 
+               rounded-b-[60%] 
+               rotate-270 
+               overflow-hidden 
+               z-10 
+               lg:hidden">
+
+                        <!-- <div
+            class="absolute inset-0 opacity-20 
+                   bg-[radial-gradient(#333_1px,transparent_1px)] 
+                   [background-size:20px_20px]">
+        </div> -->
+                    </div>
+
+                    <!-- ⭐ MOBILE: Black Background Below the Arc -->
+                    <div class="absolute -top-15 left-1/2 -translate-x-1/2 
+               w-[180%] h-[105%] 
+               bg-black 
+               rounded-t-[0%] 
+               overflow-hidden 
+               z-0 
+               lg:hidden">
+
+                        <!-- <div
+            class="absolute inset-0 opacity-20 
+                   bg-[radial-gradient(#333_1px,transparent_1px)] 
+                   [background-size:20px_20px]">
+        </div> -->
+
+                    </div>
+
+                    <!-- IMAGE -->
+                    <div class="relative w-full max-w-[380px] md:max-w-[450px] lg:max-w-[455px] xl:max-w-[520px] z-10">
+                        <img src="/assets/images/hero-illustration-v2.png" alt="Innovative Technology Dashboard"
+                            class="w-full object-contain drop-shadow-2xl transition-transform duration-500" />
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US SECTION -->
+        <section class="py-20 bg-white relative overflow-hidden" id="features">
+            <!-- Background Decoration (Optional clean geometric shapes) -->
+            <div
+                class="absolute top-0 left-0 w-64 h-64 bg-gray-50 rounded-full blur-3xl opacity-50 -translate-x-1/2 -translate-y-1/2">
+            </div>
+            <div
+                class="absolute bottom-0 right-0 w-80 h-80 bg-softRed/5 rounded-full blur-3xl opacity-60 translate-x-1/3 translate-y-1/3">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4 fade-in-up">
+                    <h2 class="text-4xl md:text-5xl font-bold text-black tracking-tight">
+                        Why Choose <span class="text-softRed">Softspire?</span>
+                    </h2>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Since 2015, we've been dedicated to empowering businesses with
+                        cutting-edge technology solutions that drive growth and efficiency.
+                    </p>
+                    <div class="w-20 h-1 bg-softRed mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 md:gap-10">
+                    <!-- Feature 1 -->
+                    <div class="feature-card group fade-in-up" style="animation-delay: 100ms;">
+                        <div
+                            class="w-16 h-16 mb-6 rounded-2xl bg-softRed/10 flex items-center justify-center text-softRed group-hover:bg-softRed group-hover:text-white transition-all duration-300 shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-black group-hover:text-softRed transition-colors">Rapid
+                            Development</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Agile methodology ensures fast delivery without compromising
+                            quality. Get your solutions to market quickly and efficiently.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card group fade-in-up" style="animation-delay: 200ms;">
+                        <div
+                            class="w-16 h-16 mb-6 rounded-2xl bg-softRed/10 flex items-center justify-center text-softRed group-hover:bg-softRed group-hover:text-white transition-all duration-300 shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-black group-hover:text-softRed transition-colors">Custom
+                            Solutions</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Every business is unique. We create tailored software solutions
+                            that perfectly align with your specific needs and industry
+                            requirements.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card group fade-in-up" style="animation-delay: 300ms;">
+                        <div
+                            class="w-16 h-16 mb-6 rounded-2xl bg-softRed/10 flex items-center justify-center text-softRed group-hover:bg-softRed group-hover:text-white transition-all duration-300 shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-black group-hover:text-softRed transition-colors">24/7
+                            Support</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Comprehensive post-implementation support ensures your systems
+                            run smoothly. Our team is always ready to assist you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CLIENTS MARQUEE SECTION -->
+        <section class="py-20 bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 mb-16 text-center fade-in-up">
+                <h2 class="text-4xl font-extrabold text-black mb-3 text-shadow-sm tracking-tight">
+                    Trusted by <span class="text-softRed">Leading Organizations</span>
+                </h2>
+                <div class="w-24 h-1 bg-softRed mx-auto rounded-full mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto font-medium">
+                    We're proud to work with companies across various industries, delivering excellence and innovation.
+                </p>
+            </div>
+
+            <!-- Scroll Container -->
+            <div class="relative w-full">
+                <!-- Fade Gradients (White) -->
+                <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
+                <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
+
+                <!-- Marquee Track -->
+                <div class="flex marquee-track gap-8 py-6 pause-on-hover w-max">
+                    <!-- Set 1 -->
+                    <!-- Card 1 -->
+                    <a href="#"
+                        class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
+                        <img src="/assets/images/client-logo-1.png" alt="Client 1"
+                            class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
+                    </a>
+                    <!-- Card 2 -->
+                    <a href="#"
+                        class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
+                        <img src="/assets/images/client-logo-2.png" alt="Client 2"
+                            class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
+                    </a>
+                    <!-- Card 3 -->
+                    <a href="#"
+                        class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
+                        <img src="/assets/images/client-logo-3.png" alt="Client 3"
+                            class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
+                    </a>
+                    <!-- Card 4 -->
+                    <a href="#"
+                        class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
+                        <img src="/assets/images/client-logo-4.png" alt="Client 4"
+                            class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
+                    </a>
+                    <!-- Card 5 -->
+                    <a href="#"
+                        class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
+                        <img src="/assets/images/client-logo-5.png" alt="Client 5"
+                            class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
+                    </a>
+                    <!-- Card 6 -->
+                    <a href="#"
+                        class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
+                        <img src="/assets/images/client-logo-6.png" alt="Client 6"
+                            class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
+                    </a>
+
+                    <!-- Set 2 (Duplicate for Infinite Loop) -->
+                    <!-- Card 1 -->
+                    <a href="#"
+                        class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
+                        <img src="/assets/images/client-logo-1.png" alt="Client 1"
+                            class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
+                    </a>
+                    <!-- Card 2 -->
+                    <a href="#"
+                        class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
+                        <img src="/assets/images/client-logo-2.png" alt="Client 2"
+                            class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
+                    </a>
+                    <!-- Card 3 -->
+                    <a href="#"
+                        class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
+                        <img src="/assets/images/client-logo-3.png" alt="Client 3"
+                            class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
+                    </a>
+                    <!-- Card 4 -->
+                    <a href="#"
+                        class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
+                        <img src="/assets/images/client-logo-4.png" alt="Client 4"
+                            class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
+                    </a>
+                    <!-- Card 5 -->
+                    <a href="#"
+                        class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
+                        <img src="/assets/images/client-logo-5.png" alt="Client 5"
+                            class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
+                    </a>
+                    <!-- Card 6 -->
+                    <a href="#"
+                        class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
+                        <img src="/assets/images/client-logo-6.png" alt="Client 6"
+                            class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- TESTIMONIALS SECTION -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <!-- Top Row: subtitle + title + arrows -->
+                <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-10">
+
+                    <!-- Left: titles -->
+                    <div>
+                        <p class="uppercase tracking-[0.3em] text-xs md:text-sm text-gray-500 mb-2">
+                            Our Reviews
+                        </p>
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-black">
+                            What Our <span class="text-softRed">Clients</span> Say
+                        </h2>
+                    </div>
+
+                    <!-- Right: arrows -->
+                    <div class="flex items-center gap-3 self-end md:self-auto">
+                        <button id="testimonialPrev"
+                            class="w-11 h-11 rounded-full bg-black text-white flex items-center justify-center shadow-md hover:scale-105 transition-transform">
+                            <!-- left arrow -->
+                            <span class="inline-block -translate-x-[1px]">&larr;</span>
+                        </button>
+                        <button id="testimonialNext"
+                            class="w-11 h-11 rounded-full bg-black text-white flex items-center justify-center shadow-md hover:scale-105 transition-transform">
+                            <!-- right arrow -->
+                            <span class="inline-block translate-x-[1px]">&rarr;</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Slider -->
+                <div class="relative">
+                    <!-- Mask to hide overflow -->
+                    <div class="overflow-hidden">
+                        <div id="testimonialTrack" class="testimonial-track flex gap-6 will-change-transform">
+
+                            <!-- CARD 1 -->
+                            <article
+                                class="testimonial-card bg-white rounded-[2rem] border border-softRed/40  px-8 pt-8 pb-7 flex flex-col mb-2">
+                                <!-- header -->
+                                <div class="flex items-center justify-between mb-6">
+                                    <!-- avatar -->
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+                                            <img src="/assets/images/KIDE-Color.png" alt="Denis Slavska"
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+
+                                    <!-- company pill -->
+                                    <div
+                                        class="inline-flex items-center gap-2 rounded-full bg-[#fff] px-4 py-2 border border-softRed">
+                                        <div
+                                            class="w-6 h-6 rounded-full bg-softRed flex items-center justify-center text-[10px] font-semibold text-white">
+                                            K
+                                        </div>
+                                        <span class="text-xs font-medium text-gray-700">K-IDE</span>
+                                    </div>
+                                </div>
+
+                                <!-- quote -->
+                                <div class="flex-1 relative">
+                                    <span
+                                        class="absolute -top-2 -left-2 text-softRed/20 text-[10.5rem] leading-none font-serif select-none pointer-events-none">
+                                        “
+                                    </span>
+
+                                    <p class="mt-5 text-xl leading-snug text-gray-900">
+                                        Softspire turned our digital academy idea into a scalable reality. Their
+                                        all-in-one website, LMS, and mobile app replaced multiple tools with one
+                                        seamless system. Fast delivery, clear communication, and a team that truly
+                                        listens.
+                                    </p>
+                                </div>
+
+
+                                <!-- footer -->
+                                <div class="mt-8 pt-6 border-t border-gray-200 text-sm">
+                                    <p class="font-semibold text-gray-900">Roji</p>
+                                    <p class="text-gray-500">
+                                        Founder, K-IDE
+                                    </p>
+                                </div>
+                            </article>
+
+
+
+                            <article
+                                class="testimonial-card bg-white rounded-[2rem] border border-softRed/40  px-8 pt-8 pb-7 flex flex-col mb-2">
+                                <!-- header -->
+                                <div class="flex items-center justify-between mb-6">
+                                    <!-- avatar -->
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+                                            <img src="/assets/images/Home Guard.jpg" alt="Denis Slavska"
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+
+                                    <!-- company pill -->
+                                    <div
+                                        class="inline-flex items-center gap-2 rounded-full bg-[#fff] px-4 py-2 border border-softRed">
+                                        <div
+                                            class="w-6 h-6 rounded-full bg-softRed flex items-center justify-center text-[10px] font-semibold text-white">
+                                            H
+                                        </div>
+                                        <span class="text-xs font-medium text-gray-700">Home Guard</span>
+                                    </div>
+                                </div>
+
+                                <!-- quote -->
+                                <div class="flex-1 relative">
+                                    <span
+                                        class="absolute -top-2 -left-2 text-softRed/20 text-[10.5rem] leading-none font-serif select-none pointer-events-none">
+                                        “
+                                    </span>
+                                    <p class="mt-5 text-xl leading-snug text-gray-900">
+                                        We needed a credible, conversion-focused website—not a generic template.
+                                        Softspire delivered exactly that and backed it with ongoing SEO and digital
+                                        marketing support. We saw traffic and inbound leads improve within weeks, with a
+                                        team that remains responsive long after launch. </p>
+                                </div>
+
+                                <!-- footer -->
+                                <div class="mt-8 pt-6 border-t border-gray-200 text-sm">
+                                    <p class="font-semibold text-gray-900"> Muhammed Khalfan</p>
+                                    <p class="text-gray-500">
+                                        Managing Director, Home Guard Pest Control & Building Cleaning Services, UAE
+                                    </p>
+                                </div>
+                            </article>
+
+
+                            <article
+                                class="testimonial-card bg-white rounded-[2rem] border border-softRed/40  px-8 pt-8 pb-7 flex flex-col mb-2">
+                                <!-- header -->
+                                <div class="flex items-center justify-between mb-6">
+                                    <!-- avatar -->
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+                                            <img src="/assets/images/Nexus Gold And Diamonds.jpg" alt="Denis Slavska"
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+
+                                    <!-- company pill -->
+                                    <div
+                                        class="inline-flex items-center gap-2 rounded-full bg-[#fff] px-4 py-2 border border-softRed">
+                                        <div
+                                            class="w-6 h-6 rounded-full bg-softRed flex items-center justify-center text-[10px] font-semibold text-white">
+                                            N
+                                        </div>
+                                        <span class="text-xs font-medium text-gray-700">Nexus</span>
+                                    </div>
+                                </div>
+
+                                <!-- quote -->
+                                <div class="flex-1 relative">
+                                    <span
+                                        class="absolute -top-2 -left-2 text-softRed/20 text-[10.5rem] leading-none font-serif select-none pointer-events-none">
+                                        “
+                                    </span>
+                                    <p class="mt-5 text-xl leading-snug text-gray-900">
+                                        Our ERP needs were complex, spanning schemes, payments, and user management via
+                                        mobile. Softspire replaced error-prone spreadsheets with a clean, stable system
+                                        where everything is traceable and accessible. What set them apart was their
+                                        understanding of business logic—not just code.
+                                </div>
+
+                                <!-- footer -->
+                                <div class="mt-8 pt-6 border-t border-gray-200 text-sm">
+                                    <p class="font-semibold text-gray-900"> Fazal</p>
+                                    <p class="text-gray-500">
+                                        Business Coordinator, Nexus Gold & Diamonds
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article
+                                class="testimonial-card bg-white rounded-[2rem] border border-softRed/40  px-8 pt-8 pb-7 flex flex-col mb-2">
+                                <!-- header -->
+                                <div class="flex items-center justify-between mb-6">
+                                    <!-- avatar -->
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+                                            <img src="/assets/images/Creocate.jpg" alt="Denis Slavska"
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+
+                                    <!-- company pill -->
+                                    <div
+                                        class="inline-flex items-center gap-2 rounded-full bg-[#fff] px-4 py-2 border border-softRed">
+                                        <div
+                                            class="w-6 h-6 rounded-full bg-softRed flex items-center justify-center text-[10px] font-semibold text-white">
+                                            C
+                                        </div>
+                                        <span class="text-xs font-medium text-gray-700">Creocate</span>
+                                    </div>
+                                </div>
+
+                                <!-- quote -->
+                                <div class="flex-1 relative">
+                                    <span
+                                        class="absolute -top-2 -left-2 text-softRed/20 text-[10.5rem] leading-none font-serif select-none pointer-events-none">
+                                        “
+                                    </span>
+                                    <p class="mt-5 text-xl leading-snug text-gray-900">
+                                        Softspire built our website and led our digital marketing with a strategic
+                                        mindset. They challenged assumptions, proposed smarter alternatives, and helped
+                                        us save time and budget. The result is a site aligned with our brand and a
+                                        stronger, more consistent online presence.
+                                        <!-- footer -->
+                                    <div class="mt-8 pt-6 border-t border-gray-200 text-sm">
+                                        <p class="font-semibold text-gray-900"> Amjad</p>
+                                        <p class="text-gray-500">
+                                            Founder, Creocate – Advertising & Creative Agency
+                                        </p>
+                                    </div>
+                            </article>
+
+                            <article
+                                class="testimonial-card bg-white rounded-[2rem] border border-softRed/40  px-8 pt-8 pb-7 flex flex-col mb-2">
+                                <!-- header -->
+                                <div class="flex items-center justify-between mb-6">
+                                    <!-- avatar -->
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+                                            <img src="/assets/images/Dainty Hand.png" alt="Denis Slavska"
+                                                class="w-full h-full object-contain">
+                                        </div>
+                                    </div>
+
+                                    <!-- company pill -->
+                                    <div
+                                        class="inline-flex items-center gap-2 rounded-full bg-[#fff] px-4 py-2 border border-softRed">
+                                        <div
+                                            class="w-6 h-6 rounded-full bg-softRed flex items-center justify-center text-[10px] font-semibold text-white">
+                                            D
+                                        </div>
+                                        <span class="text-xs font-medium text-gray-700">Dainty Hand</span>
+                                    </div>
+                                </div>
+
+                                <!-- quote -->
+                                <div class="flex-1 relative">
+                                    <span
+                                        class="absolute -top-2 -left-2 text-softRed/20 text-[10.5rem] leading-none font-serif select-none pointer-events-none">
+                                        “
+                                    </span>
+                                    <p class="mt-5 text-xl leading-snug text-gray-900">
+                                        We needed a handcrafted brand experience—not a generic shop. Softspire delivered
+                                        a trusted, refined website and continues to manage our rankings and maintenance.
+                                        Sales improved after the redesign, driven by a clear, simple, and
+                                        results-focused approach <!-- footer -->
+                                    <div class="mt-8 pt-6 border-t border-gray-200 text-sm">
+                                        <p class="font-semibold text-gray-900">Nourin</p>
+                                        <p class="text-gray-500">
+                                            Founder, Dainty Hand – Handcrafted Treasures
+                                        </p>
+                                    </div>
+                            </article>
+
+
+                            <article
+                                class="testimonial-card bg-white rounded-[2rem] border border-softRed/40  px-8 pt-8 pb-7 flex flex-col mb-2">
+                                <!-- header -->
+                                <div class="flex items-center justify-between mb-6">
+                                    <!-- avatar -->
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+                                            <img src="/assets/images/Manage Trans.jpg" alt="Denis Slavska"
+                                                class="w-full h-full object-contain">
+                                        </div>
+                                    </div>
+
+                                    <!-- company pill -->
+                                    <div
+                                        class="inline-flex items-center gap-2 rounded-full bg-[#fff] px-4 py-2 border border-softRed">
+                                        <div
+                                            class="w-6 h-6 rounded-full bg-softRed flex items-center justify-center text-[10px] font-semibold text-white">
+                                            z
+                                        </div>
+                                        <span class="text-xs font-medium text-gray-700">Zeacut</span>
+                                    </div>
+                                </div>
+
+                                <!-- quote -->
+                                <div class="flex-1 relative">
+                                    <span
+                                        class="absolute -top-2 -left-2 text-softRed/20 text-[10.5rem] leading-none font-serif select-none pointer-events-none">
+                                        “
+                                    </span>
+                                    <p class="mt-5 text-xl leading-snug text-gray-900">
+                                        Softspire built our fresh fish and meat e-commerce platform end to end. From
+                                        listings to payments, everything is simple, fast, and reliable. Reorders are
+                                        effortless, backend updates take minutes, and the system runs smoothly every
+                                        day—because they helped shape the business, not just the code.
+                                    <div class="mt-8 pt-6 border-t border-gray-200 text-sm">
+                                        <p class="font-semibold text-gray-900">Dinil</p>
+                                        <p class="text-gray-500">
+                                            Director, Zeacut – Online Fish & Meat Delivery App
+                                        </p>
+                                    </div>
+                            </article>
+
+
+                            <!-- You can add more cards here if you want -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FAQ SECTION -->
+        <section class="py-20 bg-white " id="faq">
+            <div class="max-w-4xl mx-auto px-6">
+                <!-- Header -->
+                <div class="text-center mb-16">
+                    <p class="uppercase tracking-[0.3em] text-xs md:text-sm text-gray-500 mb-2">
+                        Common Queries
+                    </p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-black">
+                        Frequently Asked <span class="text-softRed">Questions</span>
+                    </h2>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                        Get answers to common questions about our services and how we can help transform your business.
+                    </p>
+                </div>
+
+                <!-- FAQ Items Container -->
+                <div class="space-y-4">
+                    <!-- Item 1 -->
+                    <div
+                        class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <button
+                            class="faq-question w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none group">
+                            <span
+                                class="text-lg font-semibold text-gray-900 group-hover:text-softRed transition-colors pr-8">
+                                What types of software solutions do you develop?
+                            </span>
+                            <span
+                                class="faq-icon flex-shrink-0 w-8 h-8 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center transition-all duration-300 group-hover:bg-softRed/10 group-hover:text-softRed">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <div class="px-8 pb-8 pt-0 text-gray-600 leading-relaxed border-t border-transparent">
+                                We specialize in custom ERP systems, CRM platforms, web applications, mobile apps,
+                                e-commerce solutions, and Learning Management Systems. Our team uses modern technologies
+                                like React, Angular, Node.js, PHP, and Python to deliver scalable solutions that fit
+                                your specific business needs.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div
+                        class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <button
+                            class="faq-question w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none group">
+                            <span
+                                class="text-lg font-semibold text-gray-900 group-hover:text-softRed transition-colors pr-8">
+                                How long does a typical project take to complete?
+                            </span>
+                            <span
+                                class="faq-icon flex-shrink-0 w-8 h-8 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center transition-all duration-300 group-hover:bg-softRed/10 group-hover:text-softRed">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <div class="px-8 pb-8 pt-0 text-gray-600 leading-relaxed border-t border-transparent">
+                                Project timelines vary based on complexity and requirements. Simple web applications may
+                                take 4-8 weeks, while comprehensive ERP systems can take 3-6 months. We provide detailed
+                                project timelines and milestones during our initial consultation so you know exactly
+                                what to expect.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div
+                        class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <button
+                            class="faq-question w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none group">
+                            <span
+                                class="text-lg font-semibold text-gray-900 group-hover:text-softRed transition-colors pr-8">
+                                Do you provide ongoing support and maintenance?
+                            </span>
+                            <span
+                                class="faq-icon flex-shrink-0 w-8 h-8 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center transition-all duration-300 group-hover:bg-softRed/10 group-hover:text-softRed">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <div class="px-8 pb-8 pt-0 text-gray-600 leading-relaxed border-t border-transparent">
+                                Yes, we offer comprehensive post-implementation support including bug fixes, security
+                                updates, feature enhancements, and technical assistance. We provide various support
+                                packages tailored to your specific needs and budget to ensure your system runs smoothly
+                                long-term.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div
+                        class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <button
+                            class="faq-question w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none group">
+                            <span
+                                class="text-lg font-semibold text-gray-900 group-hover:text-softRed transition-colors pr-8">
+                                Can you integrate with our existing systems?
+                            </span>
+                            <span
+                                class="faq-icon flex-shrink-0 w-8 h-8 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center transition-all duration-300 group-hover:bg-softRed/10 group-hover:text-softRed">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <div class="px-8 pb-8 pt-0 text-gray-600 leading-relaxed border-t border-transparent">
+                                Absolutely! We specialize in system integration and can seamlessly connect new solutions
+                                with your existing infrastructure (CRM, ERP, Payment Gateways, etc.). Our team has
+                                experience with various databases, REST/GraphQL APIs, and third-party services to ensure
+                                smooth data flow.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div
+                        class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <button
+                            class="faq-question w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none group">
+                            <span
+                                class="text-lg font-semibold text-gray-900 group-hover:text-softRed transition-colors pr-8">
+                                What industries do you serve?
+                            </span>
+                            <span
+                                class="faq-icon flex-shrink-0 w-8 h-8 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center transition-all duration-300 group-hover:bg-softRed/10 group-hover:text-softRed">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <div class="px-8 pb-8 pt-0 text-gray-600 leading-relaxed border-t border-transparent">
+                                We serve diverse industries including Education, Healthcare, Manufacturing, Retail,
+                                Professional Services, and more. Our adaptable approach allows us to quickly understand
+                                unique industry requirements and deliver tailored solutions that address your specific
+                                operational challenges.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- UNIFIED CTA & NEWSLETTER SECTION -->
+        <section class="py-24 bg-white" id="cta-newsletter">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+
+                    <!-- LEFT COLUMN: Call to Action -->
+                    <div class="flex flex-col items-start space-y-6">
+                        <div class="w-12 h-1 bg-softRed mb-2"></div>
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-black leading-tight">
+                            Ready to Transform<br>Your <span class="text-softRed">Business?</span>
+                        </h2>
+                        <p class="text-lg text-gray-600 leading-relaxed max-w-lg">
+                            Join 20+ satisfied clients who have already transformed their businesses with our
+                            innovative solutions. Let's discuss how we can help you achieve your goals.
+                        </p>
+                        <div class="pt-4">
+                            <a href="New_Contact.html"
+                                class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white transition-all duration-300 bg-black rounded-full hover:bg-softRed hover:shadow-lg hover:scale-105 active:scale-95">
+                                Start Your Project
+                                <svg class="w-5 h-5 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: Newsletter -->
+                    <div class="flex flex-col space-y-8 lg:pt-4">
+                        <div
+                            class="p-8 md:p-10 bg-gray-50 rounded-[2.5rem] border border-gray-100 relative overflow-hidden group hover:border-softRed/20 transition-colors duration-500">
+                            <!-- Decor elements -->
+                            <div
+                                class="absolute -top-10 -right-10 w-32 h-32 bg-softRed/5 rounded-full blur-3xl group-hover:bg-softRed/10 transition-colors duration-500">
+                            </div>
+
+                            <div class="relative z-10">
+                                <h3 class="text-2xl font-bold text-black mb-3">Stay Updated</h3>
+                                <p class="text-gray-600 mb-8">
+                                    Get the latest technology trends, development tips, and industry insights delivered
+                                    directly to your inbox.
+                                </p>
+
+                                <form id="unifiedNewsletterForm" class="flex flex-col sm:flex-row gap-3">
+                                    <input type="email" placeholder="Enter your email" required
+                                        class="flex-1 px-6 py-4 bg-gray-100 text-gray-900 placeholder-gray-500 border border-transparent rounded-full focus:bg-white focus:outline-none focus:border-softRed focus:ring-1 focus:ring-softRed transition-all duration-300">
+                                    <button type="submit"
+                                        class="px-6 py-4 bg-softRed text-white font-medium rounded-full hover:bg-red-600 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 whitespace-nowrap">
+                                        Subscribe
+                                    </button>
+                                </form>
+                                <p class="mt-4 text-xs text-gray-400">
+                                    We care about your data in our <a href="#"
+                                        class="underline hover:text-softRed">privacy policy</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        </section>
+
+
+        <!-- FOOTER SECTION -->
+        <footer id="main-footer" class="relative bg-black text-white pt-20 pb-10 overflow-hidden">
+
+            <div class="relative z-10 max-w-7xl mx-auto px-6">
+                <!-- Top Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                    <!-- Column 1: Brand -->
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3">
+                            <!-- Logo Placeholder or Image if available -->
+                            <!-- <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-black font-bold">S</div> -->
+                            <span class="text-2xl font-bold tracking-tight">Softspire</span>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Empowering businesses with innovative technology solutions since 2024. We transform your
+                            ideas into digital success stories.
+                        </p>
+                        <div class="flex gap-4">
+                            <!-- Social Icons: SoftRed bg, Black icon -->
+                            <a href="https://www.instagram.com/softspiretechnologies"
+                                class="w-10 h-10 rounded-full bg-softRed flex items-center justify-center text-black hover:scale-110 transition-transform duration-300">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 014.185 3.362c.636-.247 1.363-.416 2.427-.465C7.668 2.85 8.021 2.84 10.45 2.84h.635M12 7.16a5.005 5.005 0 015.005 5.005A5.005 5.005 0 0112 17.51a5.005 5.005 0 01-5.005-5.005A5.005 5.005 0 0112 7.16zm-7.643-.906a1.243 1.243 0 100 2.486 1.243 1.243 0 000-2.486zM12 9.07a3.076 3.076 0 100 6.151 3.076 3.076 0 000-6.151z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+
+                            <a href="https://www.facebook.com/share/1DuzM6WV4M/"
+                                class="w-10 h-10 rounded-full bg-softRed flex items-center justify-center text-black hover:scale-110 transition-transform duration-300">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/company/softspire-technologies/"
+                                class="w-10 h-10 rounded-full bg-softRed flex items-center justify-center text-black hover:scale-110 transition-transform duration-300">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Company -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-6">Company</h4>
+                        <ul class="space-y-4 text-sm text-gray-400">
+                            <li><a href="about.html" class="hover:text-softRed transition-colors">About Us</a></li>
+                            <li><a href="#testimonials" class="hover:text-softRed transition-colors">Testimonials</a>
+                            </li>
+                            <li><a href="contact.html" class="hover:text-softRed transition-colors">Careers</a></li>
+                            <li><a href="#faq" class="hover:text-softRed transition-colors">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Services -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-6">Services</h4>
+                        <ul class="space-y-4 text-sm text-gray-400">
+                            <li><a href="services.html" class="hover:text-softRed transition-colors">ERP Development</a>
+                            </li>
+                            <li><a href="services.html" class="hover:text-softRed transition-colors">CRM Systems</a>
+                            </li>
+                            <li><a href="services.html" class="hover:text-softRed transition-colors">Web
+                                    Applications</a></li>
+                            <li><a href="services.html" class="hover:text-softRed transition-colors">Mobile Apps</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Contact -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-6">Contact</h4>
+                        <ul class="space-y-4 text-sm text-gray-400">
+                            <li class="flex items-start gap-3">
+                                <span>+91 99956 62112,</span>
+                                <span>+971 05577 58634</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>softspiretechnologies@gmail.com</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>Sharjah, UAE</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>Calicut, Kerala, India</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom Bar -->
+                <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
+                    <p class="text-gray-500 text-sm">
+                        &copy; 2024 Softspire Technologies LLC. All rights reserved.
+                    </p>
+                    <div class="flex gap-6 text-sm text-gray-500">
+                        <a href="#" class="hover:text-softRed transition-colors">Privacy Policy</a>
+                        <a href="#" class="hover:text-softRed transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    </main>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4 items-end">
+        <!-- Scroll To Top (Hidden by default) -->
+        <button id="scrollTopBtn"
+            class="w-12 h-12 bg-softRed text-white rounded-full shadow-lg flex items-center justify-center translate-y-20 opacity-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl pointer-events-none data-[visible=true]:translate-y-0 data-[visible=true]:opacity-100 data-[visible=true]:pointer-events-auto">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18">
+                </path>
+            </svg>
+        </button>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/919946432377" target="_blank"
+            class="w-14 h-14 bg-green-500 rounded-full shadow-lg flex items-center justify-center text-white hover:scale-110 transition-transform duration-300">
+            <!-- WhatsApp SVG Icon -->
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+            </svg>
+        </a>
+    </div>
+
+</body>
+
+</html>

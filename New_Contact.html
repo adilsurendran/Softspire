@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Softspire Technologies</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        softRed: '#EE2F50',
+                        'softRed-hover': '#d62a48',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="New_style.css">
+    <link rel="stylesheet" href="contact_style.css">
+    <script src="New_js.js" defer></script>
+
+</head>
+
+<body class="bg-white text-black font-[Poppins]">
+
+    <!-- ---------------- NAVBAR ---------------- -->
+    <nav class="w-full fixed top-0 left-0 z-50 bg-white shadow">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 py-4 flex justify-between items-center">
+            <div class="logo-box">
+                <img src="/assets/images/PNG-1.png" alt="Softspire Logo">
+            </div>
+
+            <div class="hidden lg:flex items-center gap-8 text-lg">
+                <a href="New_Index.html" class="nav-link hover:text-softRed">Home</a>
+                <a href="about.html" class="nav-link hover:text-softRed">About</a>
+
+                <div class="relative group">
+                    <button class="hover:text-softRed flex items-center gap-1">
+                        Services <span class="text-xs mt-[2px]">▾</span>
+                    </button>
+
+                    <div class="dropdown-menu absolute left-0 top-full w-72 softRed-gradient text-white 
+                      shadow-2xl rounded-2xl py-4 backdrop-blur-md bg-opacity-90 
+                      opacity-0 invisible">
+
+                        <a href="#" class="dropdown-item block px-6 py-3 text-sm rounded-md">ERP Development</a>
+                        <a href="#" class="dropdown-item block px-6 py-3 text-sm rounded-md">CRM Systems</a>
+                        <a href="#" class="dropdown-item block px-6 py-3 text-sm rounded-md">Web Applications</a>
+                        <a href="#" class="dropdown-item block px-6 py-3 text-sm rounded-md">Mobile App Development</a>
+                        <a href="#" class="dropdown-item block px-6 py-3 text-sm rounded-md">E-commerce Solutions</a>
+                    </div>
+                </div>
+
+                <a href="#" class="nav-link hover:text-softRed">Career</a>
+                <a href="New_Contact.html" class="nav-link active-nav text-softRed">Contact Us</a>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <a
+                    class="px-5 py-2 bg-softRed text-white rounded-full shadow hover:opacity-90 text-lg btn-glow-softRed cursor-pointer">Lets
+                    Talk</a>
+            </div>
+
+            <button id="menuBtn" class="text-3xl text-softRed lg:hidden">☰</button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu fixed top-0 left-0 h-full w-64 bg-white shadow-xl p-6 z-50 lg:hidden">
+            <button id="closeMenu" class="text-3xl text-softRed mb-6">✕</button>
+            <nav class="flex flex-col gap-6 text-xl">
+                <a href="New_Index.html" class="hover:text-softRed">Home</a>
+                <a href="about.html" class="hover:text-softRed">About</a>
+                <div class="w-full">
+                    <button id="servicesBtn"
+                        class="w-full text-left flex justify-between items-center text-softRed font-semibold">
+                        Services <span id="servicesArrow" class="transition-transform">▾</span>
+                    </button>
+                    <div id="servicesMenu"
+                        class="hidden flex flex-col mt-3 gap-1 softRed-gradient text-white rounded-2xl p-4 backdrop-blur-md">
+                        <a href="#" class="dropdown-item py-2 px-3 rounded-md">ERP Development</a>
+                        <a href="#" class="dropdown-item py-2 px-3 rounded-md">CRM Systems</a>
+                        <a href="#" class="dropdown-item py-2 px-3 rounded-md">Web Applications</a>
+                    </div>
+                </div>
+                <a href="#" class="hover:text-softRed">Career</a>
+                <a href="New_Contact.html" class="text-softRed font-bold">Contact Us</a>
+            </nav>
+        </div>
+    </nav>
+    <div id="overlay" class="overlay"></div>
+
+    <!-- ---------------- HERO SECTION (Strict Layout: Text Left, Form Right) ---------------- -->
+    <section class="contact-hero-bg">
+        <div class="max-w-7xl mx-auto px-6 hero-layout">
+
+            <!-- LEFT: Content -->
+            <div class="hero-text fade-in-up">
+                <div class="inline-flex flex-col items-start">
+                    <h1 class="leading-tight">Contact <span class="text-softRed">Us</span></h1>
+                    <span class="w-16 h-1.5 bg-softRed rounded-full mt-2 opacity-90"></span>
+                </div>
+                <p class="mt-6">
+                    Email, call, or complete the form to learn how<br>
+                    Softspire can solve your messaging problem.
+                </p>
+
+                <div class="hero-contact-info space-y-4">
+                    <div>info@softspire.in</div>
+                    <div>+91 99956 62112</div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 text-sm text-gray-600">
+                    <div class="group cursor-pointer">
+                        <h4 class="font-bold text-black mb-1 group-hover:text-softRed transition-colors">Customer
+                            Support</h4>
+                        <div class="w-8 h-0.5 bg-softRed rounded-full"></div>
+                        <p class="text-4xl mt-3 hover:text-black transition-colors">Our support team is available around
+                            the clock to address any concerns
+                            or queries you may
+                            have.</p>
+                    </div>
+                    <div class="group cursor-pointer">
+                        <h4 class="font-bold text-black mb-1 group-hover:text-softRed transition-colors">Feedbacks</h4>
+                        <div class="w-8 h-0.5 bg-softRed rounded-full"></div>
+                        <p class="mt-3 hover:text-black transition-colors">We value your feedback and are continuously
+                            working to improve Softspire. Your
+                            input is
+                            crucial.</p>
+                    </div>
+                    <div class="group cursor-pointer">
+                        <h4 class="font-bold text-black mb-1 group-hover:text-softRed transition-colors">Media Inquiries
+                        </h4>
+                        <div class="w-8 h-0.5 bg-softRed rounded-full"></div>
+                        <p class="mt-3 hover:text-black transition-colors">For media-related questions or press
+                            inquiries, please contact us at
+                            info@softspire.in.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Contact Form -->
+            <div class="hero-form-card fade-in-up transition-all hover:-translate-y-2">
+                <h2>Get in <span class="text-softRed">Touch</span></h2>
+                <p>You can reach us anytime</p>
+
+                <form class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <input type="text" placeholder="Name"
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-softRed focus:ring-1 focus:ring-softRed transition-all">
+                        <input type="text" placeholder="Place"
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-softRed focus:ring-1 focus:ring-softRed transition-all">
+                    </div>
+
+                    <input type="email" placeholder="Your email"
+                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-softRed focus:ring-1 focus:ring-softRed transition-all">
+
+                    <div>
+                        <input type="tel" placeholder="Phone number"
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-softRed focus:ring-1 focus:ring-softRed transition-all">
+                    </div>
+
+                    <div class="relative">
+                        <textarea rows="4" placeholder="How can we help?"
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-softRed focus:ring-1 focus:ring-softRed transition-all resize-none"></textarea>
+                    </div>
+
+                    <button type="button"
+                        class="w-full py-4 bg-softRed text-white font-bold rounded-full shadow-lg hover:shadow-xl hover:bg-softRed-hover transition-all transform active:scale-95">
+                        Submit
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ---------------- LOCATIONS SECTION (Dual Visuals) ---------------- -->
+    <section class="locations-section">
+        <div class="max-w-7xl mx-auto px-6 locations-grid">
+
+            <!-- LEFT: Maps (Dual Cards logic) -->
+            <!-- LEFT: Maps (Dual Pins logic) -->
+            <div class="flex flex-col gap-8">
+                <!-- Single Map Container -->
+                <div class="map-visual-container group">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15000000!2d65.5!3d19.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1709664555030!5m2!1sen!2sin"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <!-- Pin 1: India -->
+                    <div class="map-float-card pin-india">
+                        <div class="icon">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs mb-0">UL Cyberpark, Calicut</h4>
+                        </div>
+                    </div>
+
+                    <!-- Pin 2: UAE -->
+                    <div class="map-float-card pin-uae">
+                        <div class="icon">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs mb-0">Sharjah, UAE</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Text -->
+            <div class="location-text-content fade-in-up">
+                <span class="subtitle">Our Locations</span>
+                <h2><span class="text-softRed">Connecting</span> Near and Far</h2>
+                <span class="w-16 h-1.5 bg-softRed rounded-full mt-2 block opacity-90 mb-8"></span>
+
+                <div class="mt-8 space-y-10">
+                    <div class="address-block">
+                        <h4>India Office</h4>
+                        <span class="w-24 h-1 bg-softRed rounded-full mb-3 block opacity-90"></span>
+                        <p>
+                            Near UL Cyberpark, Nellicode<br>
+                            Calicut, Kerala, India 673016
+                        </p>
+                    </div>
+
+                    <div class="address-block">
+                        <h4>UAE Office</h4>
+                        <span class="w-24 h-1 bg-softRed rounded-full mb-3 block opacity-90"></span>
+                        <p>
+                            Sharjah, United Arab Emirates
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ---------------- FAQ SECTION ---------------- -->
+    <section class="faq-section">
+        <div class="max-w-7xl mx-auto px-6 faq-layout">
+
+            <!-- LEFT -->
+            <div class="faq-left fade-in-up">
+                <span class="text-sm font-bold text-gray-400 tracking-widest uppercase mb-2 block">FAQ</span>
+                <h2>Do you have any<br><span class="text-softRed">questions</span> for<span class="text-softRed">
+                        us?</span></h2>
+                <span class="w-16 h-1.5 bg-softRed rounded-full mt-2 block opacity-90 mb-8"></span>
+                <p>If there are question you want to ask. We will answer all your question.</p>
+
+                <div class="relative max-w-sm mt-8">
+                    <input type="email" placeholder="Enter your email"
+                        class="w-full py-4 pl-6 pr-28 bg-white border border-gray-200 rounded-full text-sm focus:outline-none focus:border-softRed shadow-sm">
+                    <button
+                        class="absolute top-1.5 right-1.5 bottom-1.5 px-6 bg-softRed text-white font-bold rounded-full hover:bg-softRed-hover transition-all text-sm">
+                        Submit
+                    </button>
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="space-y-4 fade-in-up">
+
+                <!-- FAQ 1 -->
+                <div class="faq-item-minimal">
+                    <button class="faq-btn-minimal">
+                        What makes Softspire different?
+                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="faq-content-minimal text-gray-600">
+                        We prioritize custom-tailored solutions, ensuring that every piece of software we build is
+                        aligned perfectly with your business goals.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item-minimal">
+                    <button class="faq-btn-minimal">
+                        How secure are my conversations?
+                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="faq-content-minimal text-gray-600">
+                        We use enterprise-grade encryption for all communications and data storage to ensure your
+                        information remains strictly confidential.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item-minimal">
+                    <button class="faq-btn-minimal">
+                        Can I personalize my Softspire experience?
+                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="faq-content-minimal text-gray-600">
+                        Yes, our solutions are highly modular. You can choose features, themes, and integrations that
+                        best suit your operational needs.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item-minimal">
+                    <button class="faq-btn-minimal">
+                        What group features does Softspire offer?
+                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="faq-content-minimal text-gray-600 ">
+                        We offer comprehensive team management tools, including shared workspaces, role-based
+                        permissions, and real-time collaboration features.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------------- ROUNDED FOOTER CONTAINER ---------------- -->
+    <div class="footer-wrap-outer">
+        <!-- Background Image -->
+        <img src="/assets/images/ChatGPT Image Dec 14, 2025, 11_47_59 AM.png" class="footer-bg-img" alt="Background">
+
+        <!-- Overlay for readability -->
+        <div class="absolute inset-0 bg-black/40 z-0"></div>
+
+        <div class="footer-inner-content">
+
+            <!-- "Ready to Experience" Section (CTA) -->
+            <div class="footer-cta-centered">
+                <h2>Ready to experience the speed and simplicity of <span class="text-softRed">Softspire?</span></h2>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button
+                        class="px-8 py-3 bg-softRed text-white font-bold rounded-full hover:bg-gray-200 transition">Get
+                        Started</button>
+                    <button
+                        class="px-8 py-3 border border-white text-white font-bold rounded-full hover:bg-white/10 transition flex items-center gap-2">
+                        Learn more
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Footer Links (Grid) -->
+            <!-- Footer Links (Grid) -->
+            <div
+                class="max-w-7xl mx-auto footer-links-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-left justify-items-start mb-16">
+
+                <!-- Column 1: Brand -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl font-bold tracking-tight text-white">Softspire</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Empowering businesses with innovative technology solutions since 2015. We transform your
+                        ideas into digital success stories.
+                    </p>
+                    <div class="flex gap-4">
+                        <!-- Social Icons: SoftRed bg, White icon -->
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-softRed flex items-center justify-center text-white hover:scale-110 transition-transform duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-softRed flex items-center justify-center text-white hover:scale-110 transition-transform duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-softRed flex items-center justify-center text-white hover:scale-110 transition-transform duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 014.185 3.362c.636-.247 1.363-.416 2.427-.465C7.668 2.85 8.021 2.84 10.45 2.84h.635M12 7.16a5.005 5.005 0 015.005 5.005A5.005 5.005 0 0112 17.51a5.005 5.005 0 01-5.005-5.005A5.005 5.005 0 0112 7.16zm-7.643-.906a1.243 1.243 0 100 2.486 1.243 1.243 0 000-2.486zM12 9.07a3.076 3.076 0 100 6.151 3.076 3.076 0 000-6.151z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Company -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6">Company</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a href="about.html" class="hover:text-softRed transition-colors">About Us</a></li>
+                        <li><a href="#testimonials" class="hover:text-softRed transition-colors">Testimonials</a>
+                        </li>
+                        <li><a href="contact.html" class="hover:text-softRed transition-colors">Careers</a></li>
+                        <li><a href="#faq" class="hover:text-softRed transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6">Services</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a href="services.html" class="hover:text-softRed transition-colors">ERP Development</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-softRed transition-colors">CRM Systems</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-softRed transition-colors">Web
+                                Applications</a></li>
+                        <li><a href="services.html" class="hover:text-softRed transition-colors">Mobile Apps</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <span>+91 99956 62112</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span>softspiretechnologies@gmail.com</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span>Calicut, Kerala, India</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span>Sharjah, UAE</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-gray-500 text-sm">
+                    &copy; 2024 Softspire Technologies LLC. All rights reserved.
+                </p>
+                <div class="flex gap-6 text-sm text-gray-500">
+                    <a href="#" class="hover:text-softRed transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-softRed transition-colors">Terms of Service</a>
+                </div>
+            </div>
+
+            <!-- Big Text Overlay -->
+            <!-- <div class="mt-20 overflow-hidden relative opacity-100 mix-blend-overlay">
+                <h1
+                    class="text-[10rem] md:text-[14rem] font-bold leading-none text-center select-none pointer-events-none text-white/20">
+                    Softspire
+                </h1>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4 items-end">
+        <!-- Scroll To Top (Hidden by default) -->
+        <button id="scrollTopBtn"
+            class="w-12 h-12 bg-softRed text-white rounded-full shadow-lg flex items-center justify-center translate-y-20 opacity-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl pointer-events-none data-[visible=true]:translate-y-0 data-[visible=true]:opacity-100 data-[visible=true]:pointer-events-auto">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18">
+                </path>
+            </svg>
+        </button>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/919946432377" target="_blank"
+            class="w-14 h-14 bg-green-500 rounded-full shadow-lg flex items-center justify-center text-white hover:scale-110 transition-transform duration-300">
+            <!-- WhatsApp SVG Icon -->
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+            </svg>
+        </a>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,389 @@
+/* contact_style.css */
+
+/* ---------------- HERO SECTION ---------------- */
+.contact-hero-bg {
+    /* "light blue bg color, change that into softred or white" - User asked for White or SoftRed tint. 
+       Let's go with a very subtle SoftRed tint for premium feel, or pure white if safer. 
+       Used a very light gradient. */
+    /* background: linear-gradient(to bottom, #ffffff, #fff1f3); */
+    background: white;
+    padding-top: 120px;
+    padding-bottom: 50px;
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .hero-layout {
+        grid-template-columns: 1fr 1fr;
+        /* Text Left, Form Right */
+        gap: 80px;
+        align-items: start;
+    }
+}
+
+/* Hero Text Side */
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #000;
+    margin-bottom: 24px;
+}
+
+.hero-text p {
+    color: #4B5563;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.hero-contact-info div {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.hero-links a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-weight: 600;
+    color: #111;
+    transition: color 0.2s;
+}
+
+.hero-links a:hover {
+    color: #EE2F50;
+}
+
+/* Hero Form Side */
+.hero-form-card {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.08);
+}
+
+.hero-form-card h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.hero-form-card p {
+    color: #6B7280;
+    margin-bottom: 32px;
+}
+
+/* ---------------- LOCATIONS SECTION ---------------- */
+.locations-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .locations-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        /* Map Left (Larger), Text Right */
+    }
+}
+
+/* Map Graphics (Simulating the design) */
+.map-visual-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    /* Smaller height ratio */
+    background: #f3f4f6;
+    border-radius: 24px;
+    overflow: hidden;
+    /* If we had the actual map image from design we would use it here. 
+        For now using a clean map iframe as "Exact Design" implies visual fidelity. 
+        I will overlay the "Card" on top of the map like the design. */
+    border: 1px solid #e5e7eb;
+}
+
+.map-visual-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    opacity: 0.8;
+    filter: grayscale(100%) contrast(1.1);
+    /* Stylized map */
+}
+
+/* The floating card on the map */
+/* The floating card on the map */
+.map-float-card {
+    position: absolute;
+    /* top/left set via specific classes below */
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 8px 12px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: auto;
+    min-width: max-content;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    /* No transition on the card shell as requested */
+}
+
+/* Specific Positions - default desktop */
+.pin-india {
+    top: 70%;
+    left: 70%;
+}
+
+.pin-uae {
+    top: 35%;
+    left: 30%;
+}
+
+/* Hover effect on the card triggers text color change */
+.map-float-card:hover h4 {
+    color: #EE2F50;
+    transition: color 0.2s ease;
+}
+
+.map-float-card .icon {
+    width: 28px;
+    height: 28px;
+    background: #EE2F50;
+    /* SoftRed */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* Mobile Responsive Adjustments for Pins */
+@media (max-width: 640px) {
+    .map-float-card {
+        padding: 6px 10px;
+        border-radius: 8px;
+        gap: 8px;
+    }
+
+    .map-float-card .icon {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+
+    .map-float-card h4 {
+        font-size: 10px;
+        /* even smaller text on mobile if needed */
+    }
+
+    /* Adjust positions slightly for narrow screens if pins get too close to edges */
+    .pin-india {
+        left: 72%;
+        /* nudge slightly */
+        top: 72%;
+    }
+
+
+    .pin-uae {
+        left: 25%;
+        top: 32%;
+    }
+}
+
+/* Location Text Side */
+.location-text-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.location-text-content span.subtitle {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #4B5563;
+}
+
+.address-block {
+    margin-bottom: 32px;
+}
+
+.address-block h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+.address-block p {
+    color: #6B7280;
+    line-height: 1.6;
+}
+
+/* ---------------- FAQ SECTION ---------------- */
+.faq-section {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.faq-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+}
+
+@media (min-width: 1024px) {
+    .faq-layout {
+        grid-template-columns: 0.8fr 1.2fr;
+        /* Left Title, Right Accordion */
+    }
+}
+
+.faq-left h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.faq-left p {
+    color: #6B7280;
+    margin-bottom: 32px;
+}
+
+/* Minimal Accordion */
+.faq-item-minimal {
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 16px;
+}
+
+.faq-btn-minimal {
+    width: 100%;
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111;
+    text-align: left;
+    transition: color 0.3s;
+}
+
+.faq-btn-minimal:hover {
+    color: #EE2F50;
+}
+
+.faq-content-minimal {
+    max-height: 0;
+    overflow: hidden;
+    /* Smoother cubic-bezier for a more natural feel */
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.5s ease;
+    opacity: 0;
+    padding-right: 20px;
+}
+
+/* Active State (Click-based) */
+.faq-btn-minimal.active {
+    color: #EE2F50;
+}
+
+.faq-btn-minimal.active svg {
+    transform: rotate(180deg);
+    /* optional: rotate icon if desired, or keep as is */
+    color: #EE2F50;
+}
+
+/* Open State logic handled via JS setting max-height */
+.faq-content-minimal.open {
+    opacity: 1;
+    padding-bottom: 24px;
+}
+
+/* ---------------- FOOTER WRAPPER ---------------- */
+.footer-wrap-outer {
+    margin: 20px;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    /* Height handled by content */
+    background: black;
+    /* Fallback */
+}
+
+@media (min-width: 1024px) {
+    .footer-wrap-outer {
+        margin: 40px;
+    }
+}
+
+.footer-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.6;
+    /* Adjust visibility */
+}
+
+/* Content specific to this "Footer Image Container" */
+.footer-inner-content {
+    position: relative;
+    z-index: 10;
+    padding: 80px 20px 40px 20px;
+    color: white;
+}
+
+@media (min-width: 1024px) {
+    .footer-inner-content {
+        padding: 120px 60px 60px 60px;
+    }
+}
+
+/* "Ready to Experience" CTA inside footer */
+.footer-cta-centered {
+    text-align: center;
+    max-w-width: 800px;
+    margin: 0 auto 100px auto;
+    /* Space before links */
+}
+
+.footer-cta-centered h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+    .footer-cta-centered h2 {
+        font-size: 4rem;
+    }
+}
+
+.footer-links-grid {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 60px;
+}
