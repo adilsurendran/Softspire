@@ -5,15 +5,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Softspire Technologies</title>
+    <link rel="icon" href="./assets/images/fav.png" type="image/png">
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="New_style.css">
-    <script src="New_js.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        softRed: '#EE2F50',
+                        'softRed-hover': '#d62a48',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 
 </head>
 
@@ -26,9 +45,9 @@
                 <img src="/assets/images/PNG-1.png" alt="Softspire Logo">
             </div>
 
-            <div class="hidden lg:flex items-center gap-8 text-lg">
-                <a href="#" class="nav-link active-nav hover:text-softRed">Home</a>
-                <a href="#" class="nav-link hover:text-softRed">About</a>
+            <div class="hidden lg:flex items-center gap-8 text-lg font-medium">
+                <a href="under_construction.html" class="nav-link active-nav hover:text-softRed">Home</a>
+                <a href="under_construction.html" class="nav-link hover:text-softRed">About</a>
 
                 <div class="relative group">
                     <button class="hover:text-softRed flex items-center gap-1">
@@ -39,23 +58,29 @@
                       shadow-2xl rounded-2xl py-4 backdrop-blur-md bg-opacity-90 
                       opacity-0 invisible">
 
-                        <a href="#" class="dropdown-item block px-6 py-3 text-sm rounded-md">ERP Development</a>
-                        <a href="#" class="dropdown-item block px-6 py-3 text-sm rounded-md">CRM Systems</a>
-                        <a href="#" class="dropdown-item block px-6 py-3 text-sm rounded-md">Learning Management
+                        <a href="under_construction.html" class="dropdown-item block px-6 py-3 text-sm rounded-md">ERP
+                            Development</a>
+                        <a href="under_construction.html" class="dropdown-item block px-6 py-3 text-sm rounded-md">CRM
                             Systems</a>
-                        <a href="#" class="dropdown-item block px-6 py-3 text-sm rounded-md">Web Applications</a>
-                        <a href="#" class="dropdown-item block px-6 py-3 text-sm rounded-md">Mobile App Development</a>
-                        <a href="#" class="dropdown-item block px-6 py-3 text-sm rounded-md">E-commerce Solutions</a>
+                        <a href="under_construction.html"
+                            class="dropdown-item block px-6 py-3 text-sm rounded-md">Learning Management
+                            Systems</a>
+                        <a href="under_construction.html" class="dropdown-item block px-6 py-3 text-sm rounded-md">Web
+                            Applications</a>
+                        <a href="under_construction.html"
+                            class="dropdown-item block px-6 py-3 text-sm rounded-md">Mobile App Development</a>
+                        <a href="under_construction.html"
+                            class="dropdown-item block px-6 py-3 text-sm rounded-md">E-commerce Solutions</a>
 
                     </div>
                 </div>
 
-                <a href="#" class="nav-link hover:text-softRed">Career</a>
-                <a href="New_Contact.html" class="nav-link hover:text-softRed">Contact Us</a>
+                <a href="under_construction.html" class="nav-link hover:text-softRed">Career</a>
+                <a href="contact.html" class="nav-link hover:text-softRed">Contact Us</a>
             </div>
 
             <div class="hidden lg:flex items-center gap-4">
-                <a
+                <a href="contact.html"
                     class="px-5 py-2 bg-softRed text-white rounded-full shadow hover:opacity-90 text-lg btn-glow-softRed">Lets
                     Talk</a>
             </div>
@@ -68,8 +93,8 @@
             <button id="closeMenu" class="text-3xl text-softRed mb-6">✕</button>
 
             <nav class="flex flex-col gap-6 text-xl">
-                <a href="#" class="hover:text-softRed">Home</a>
-                <a href="#" class="hover:text-softRed">About</a>
+                <a href="under_construction.html" class="hover:text-softRed">Home</a>
+                <a href="under_construction.html" class="hover:text-softRed">About</a>
 
                 <div class="w-full">
                     <button id="servicesBtn"
@@ -81,18 +106,22 @@
                     <div id="servicesMenu"
                         class="hidden flex flex-col mt-3 gap-1 softRed-gradient text-white rounded-2xl p-4 backdrop-blur-md">
 
-                        <a href="#" class="dropdown-item py-2 px-3 rounded-md">ERP Development</a>
-                        <a href="#" class="dropdown-item py-2 px-3 rounded-md">CRM Systems</a>
-                        <a href="#" class="dropdown-item py-2 px-3 rounded-md">Learning Management Systems</a>
-                        <a href="#" class="dropdown-item py-2 px-3 rounded-md">Web Applications</a>
-                        <a href="#" class="dropdown-item py-2 px-3 rounded-md">Mobile App Development</a>
-                        <a href="#" class="dropdown-item py-2 px-3 rounded-md">E-commerce Solutions</a>
+                        <a href="under_construction.html" class="dropdown-item py-2 px-3 rounded-md">ERP Development</a>
+                        <a href="under_construction.html" class="dropdown-item py-2 px-3 rounded-md">CRM Systems</a>
+                        <a href="under_construction.html" class="dropdown-item py-2 px-3 rounded-md">Learning Management
+                            Systems</a>
+                        <a href="under_construction.html" class="dropdown-item py-2 px-3 rounded-md">Web
+                            Applications</a>
+                        <a href="under_construction.html" class="dropdown-item py-2 px-3 rounded-md">Mobile App
+                            Development</a>
+                        <a href="under_construction.html" class="dropdown-item py-2 px-3 rounded-md">E-commerce
+                            Solutions</a>
 
                     </div>
                 </div>
 
-                <a href="#" class="hover:text-softRed">Career</a>
-                <a href="New_Contact.html" class="hover:text-softRed">Contact Us</a>
+                <a href="under_construction.html" class="hover:text-softRed">Career</a>
+                <a href="contact.html" class="hover:text-softRed">Contact Us</a>
 
                 <a class="px-4 py-2 bg-softRed text-white rounded-full w-fit mt-2">Lets Talk</a>
             </nav>
@@ -136,14 +165,18 @@
                     </p>
 
                     <div class="flex flex-wrap items-center gap-6 pt-4">
-                        <button
-                            class="bg-primary hover:bg-primary-hover text-white px-10 py-4 rounded-full font-bold shadow-glow hover:shadow-glow-hover transition-all transform hover:-translate-y-1 text-lg">
-                            Get Started
-                        </button>
-                        <button
-                            class="bg-primary text-white px-10 py-4 rounded-full font-bold shadow-glow hover:shadow-glow-hover transition-all transform hover:-translate-y-1 text-lg">
-                            Explore Our Services
-                        </button>
+                        <a href="under_construction.html">
+                            <button
+                                class="bg-primary hover:bg-primary-hover text-white px-10 py-4 rounded-full font-bold shadow-glow hover:shadow-glow-hover transition-all transform hover:-translate-y-1 text-lg">
+                                Get Started
+                            </button>
+                        </a>
+                        <a href="under_construction.html">
+                            <button
+                                class="bg-primary text-white px-10 py-4 rounded-full font-bold shadow-glow hover:shadow-glow-hover transition-all transform hover:-translate-y-1 text-lg">
+                                Explore Our Services
+                            </button>
+                        </a>
                     </div>
 
                     <div class="space-y-4 pt-6">
@@ -340,37 +373,37 @@
                 <div class="flex marquee-track gap-8 py-6 pause-on-hover w-max">
                     <!-- Set 1 -->
                     <!-- Card 1 -->
-                    <a href="#"
+                    <a href="under_construction.html"
                         class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
                         <img src="/assets/images/client-logo-1.png" alt="Client 1"
                             class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
                     </a>
                     <!-- Card 2 -->
-                    <a href="#"
+                    <a href="under_construction.html"
                         class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
                         <img src="/assets/images/client-logo-2.png" alt="Client 2"
                             class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
                     </a>
                     <!-- Card 3 -->
-                    <a href="#"
+                    <a href="under_construction.html"
                         class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
                         <img src="/assets/images/client-logo-3.png" alt="Client 3"
                             class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
                     </a>
                     <!-- Card 4 -->
-                    <a href="#"
+                    <a href="under_construction.html"
                         class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
                         <img src="/assets/images/client-logo-4.png" alt="Client 4"
                             class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
                     </a>
                     <!-- Card 5 -->
-                    <a href="#"
+                    <a href="under_construction.html"
                         class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
                         <img src="/assets/images/client-logo-5.png" alt="Client 5"
                             class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
                     </a>
                     <!-- Card 6 -->
-                    <a href="#"
+                    <a href="under_construction.html"
                         class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
                         <img src="/assets/images/client-logo-6.png" alt="Client 6"
                             class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
@@ -378,37 +411,37 @@
 
                     <!-- Set 2 (Duplicate for Infinite Loop) -->
                     <!-- Card 1 -->
-                    <a href="#"
+                    <a href="under_construction.html"
                         class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
                         <img src="/assets/images/client-logo-1.png" alt="Client 1"
                             class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
                     </a>
                     <!-- Card 2 -->
-                    <a href="#"
+                    <a href="under_construction.html"
                         class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
                         <img src="/assets/images/client-logo-2.png" alt="Client 2"
                             class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
                     </a>
                     <!-- Card 3 -->
-                    <a href="#"
+                    <a href="under_construction.html"
                         class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
                         <img src="/assets/images/client-logo-3.png" alt="Client 3"
                             class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
                     </a>
                     <!-- Card 4 -->
-                    <a href="#"
+                    <a href="under_construction.html"
                         class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
                         <img src="/assets/images/client-logo-4.png" alt="Client 4"
                             class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
                     </a>
                     <!-- Card 5 -->
-                    <a href="#"
+                    <a href="under_construction.html"
                         class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
                         <img src="/assets/images/client-logo-5.png" alt="Client 5"
                             class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
                     </a>
                     <!-- Card 6 -->
-                    <a href="#"
+                    <a href="under_construction.html"
                         class="group client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-[0_3px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_25px_rgba(238,47,80,0.25)] border border-gray-50 transition-all duration-300 w-[200px] h-[110px] hover:-translate-y-1">
                         <img src="/assets/images/client-logo-6.png" alt="Client 6"
                             class="w-full h-full object-contain transition-all duration-300 transform scale-110 group-hover:scale-125">
@@ -420,7 +453,7 @@
 
 
         <!-- TESTIMONIALS SECTION -->
-        <section class="py-20 bg-white">
+        <section class="py-20 bg-white" id="testimonials">
             <div class="max-w-7xl mx-auto px-6">
                 <!-- Top Row: subtitle + title + arrows -->
                 <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-10">
@@ -649,7 +682,7 @@
                                     <div class="flex items-center gap-3">
                                         <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
                                             <img src="/assets/images/Dainty Hand.png" alt="Denis Slavska"
-                                                class="w-full h-full object-contain">
+                                                class="w-full h-full object-cover">
                                         </div>
                                     </div>
 
@@ -691,8 +724,8 @@
                                     <!-- avatar -->
                                     <div class="flex items-center gap-3">
                                         <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
-                                            <img src="/assets/images/Manage Trans.jpg" alt="Denis Slavska"
-                                                class="w-full h-full object-contain">
+                                            <img src="/assets/images/ZeaCut.png" alt="Denis Slavska"
+                                                class="w-full h-full object-cover">
                                         </div>
                                     </div>
 
@@ -908,7 +941,7 @@
                             innovative solutions. Let's discuss how we can help you achieve your goals.
                         </p>
                         <div class="pt-4">
-                            <a href="New_Contact.html"
+                            <a href="contact.html"
                                 class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white transition-all duration-300 bg-black rounded-full hover:bg-softRed hover:shadow-lg hover:scale-105 active:scale-95">
                                 Start Your Project
                                 <svg class="w-5 h-5 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -937,15 +970,16 @@
                                 </p>
 
                                 <form id="unifiedNewsletterForm" class="flex flex-col sm:flex-row gap-3">
-                                    <input type="email" placeholder="Enter your email" required
+                                    <input type="email" id="newsletterEmailInput" placeholder="Enter your email"
+                                        required
                                         class="flex-1 px-6 py-4 bg-gray-100 text-gray-900 placeholder-gray-500 border border-transparent rounded-full focus:bg-white focus:outline-none focus:border-softRed focus:ring-1 focus:ring-softRed transition-all duration-300">
-                                    <button type="submit"
+                                    <button type="submit" id="newsletterSubmitBtn"
                                         class="px-6 py-4 bg-softRed text-white font-medium rounded-full hover:bg-red-600 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 whitespace-nowrap">
                                         Subscribe
                                     </button>
                                 </form>
                                 <p class="mt-4 text-xs text-gray-400">
-                                    We care about your data in our <a href="#"
+                                    We care about your data in our <a href="under_construction.html"
                                         class="underline hover:text-softRed">privacy policy</a>.
                                 </p>
                             </div>
@@ -1013,10 +1047,12 @@
                     <div>
                         <h4 class="text-lg font-semibold text-white mb-6">Company</h4>
                         <ul class="space-y-4 text-sm text-gray-400">
-                            <li><a href="about.html" class="hover:text-softRed transition-colors">About Us</a></li>
+                            <li><a href="under_construction.html" class="hover:text-softRed transition-colors">About
+                                    Us</a></li>
                             <li><a href="#testimonials" class="hover:text-softRed transition-colors">Testimonials</a>
                             </li>
-                            <li><a href="contact.html" class="hover:text-softRed transition-colors">Careers</a></li>
+                            <li><a href="under_construction.html"
+                                    class="hover:text-softRed transition-colors">Careers</a></li>
                             <li><a href="#faq" class="hover:text-softRed transition-colors">FAQ</a></li>
                         </ul>
                     </div>
@@ -1025,13 +1061,16 @@
                     <div>
                         <h4 class="text-lg font-semibold text-white mb-6">Services</h4>
                         <ul class="space-y-4 text-sm text-gray-400">
-                            <li><a href="services.html" class="hover:text-softRed transition-colors">ERP Development</a>
+                            <li><a href="under_construction.html" class="hover:text-softRed transition-colors">ERP
+                                    Development</a>
                             </li>
-                            <li><a href="services.html" class="hover:text-softRed transition-colors">CRM Systems</a>
+                            <li><a href="under_construction.html" class="hover:text-softRed transition-colors">CRM
+                                    Systems</a>
                             </li>
-                            <li><a href="services.html" class="hover:text-softRed transition-colors">Web
+                            <li><a href="under_construction.html" class="hover:text-softRed transition-colors">Web
                                     Applications</a></li>
-                            <li><a href="services.html" class="hover:text-softRed transition-colors">Mobile Apps</a>
+                            <li><a href="under_construction.html" class="hover:text-softRed transition-colors">Mobile
+                                    Apps</a>
                             </li>
                         </ul>
                     </div>
@@ -1041,11 +1080,11 @@
                         <h4 class="text-lg font-semibold text-white mb-6">Contact</h4>
                         <ul class="space-y-4 text-sm text-gray-400">
                             <li class="flex items-start gap-3">
-                                <span>+91 99956 62112,</span>
+                                <span>+91 99955 62112,</span>
                                 <span>+971 05577 58634</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span>softspiretechnologies@gmail.com</span>
+                                <span>mail@softspiretechnologies.com</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <span>Sharjah, UAE</span>
@@ -1063,8 +1102,10 @@
                         &copy; 2024 Softspire Technologies LLC. All rights reserved.
                     </p>
                     <div class="flex gap-6 text-sm text-gray-500">
-                        <a href="#" class="hover:text-softRed transition-colors">Privacy Policy</a>
-                        <a href="#" class="hover:text-softRed transition-colors">Terms of Service</a>
+                        <a href="under_construction.html" class="hover:text-softRed transition-colors">Privacy
+                            Policy</a>
+                        <a href="under_construction.html" class="hover:text-softRed transition-colors">Terms of
+                            Service</a>
                     </div>
                 </div>
             </div>
@@ -1085,7 +1126,7 @@
         </button>
 
         <!-- WhatsApp -->
-        <a href="https://wa.me/919946432377" target="_blank"
+        <a href="https://wa.me/+919995562112" target="_blank"
             class="w-14 h-14 bg-green-500 rounded-full shadow-lg flex items-center justify-center text-white hover:scale-110 transition-transform duration-300">
             <!-- WhatsApp SVG Icon -->
             <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -1095,6 +1136,59 @@
         </a>
     </div>
 
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 z-[100] hidden items-center justify-center">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/50 transition-opacity duration-300 opacity-0" id="modalOverlay"></div>
+
+        <!-- Modal Card -->
+        <div class="relative bg-white rounded-[2rem] p-8 md:p-12 w-[90%] max-w-md text-center transform scale-90 opacity-0 transition-all duration-300 shadow-2xl"
+            id="modalCard">
+
+            <!-- Icon Circle -->
+            <div
+                class="w-20 h-20 mx-auto mb-6 bg-softRed rounded-full flex items-center justify-center relative shadow-[0_0_20px_rgba(238,47,80,0.4)]">
+
+                <!-- Orbiting Grains Container -->
+                <div class="absolute inset-[-20px] animate-spin-slow pointer-events-none">
+                    <!-- Top Cluster -->
+                    <div class="absolute top-0 left-[50%] w-1.5 h-1.5 bg-softRed rounded-full opacity-90"></div>
+                    <div class="absolute top-[5%] left-[40%] w-1 h-1 bg-softRed rounded-full opacity-60"></div>
+                    <div class="absolute top-[8%] left-[60%] w-2 h-2 bg-softRed rounded-full opacity-40"></div>
+
+                    <!-- Right Cluster -->
+                    <div class="absolute top-[50%] right-0 w-1.5 h-1.5 bg-softRed rounded-full opacity-80"></div>
+                    <div class="absolute top-[30%] right-[5%] w-1 h-1 bg-softRed rounded-full opacity-50"></div>
+                    <div class="absolute bottom-[20%] right-[2%] w-2 h-2 bg-softRed rounded-full opacity-30"></div>
+
+                    <!-- Bottom Cluster -->
+                    <div class="absolute bottom-0 left-[55%] w-1.5 h-1.5 bg-softRed rounded-full opacity-90"></div>
+                    <div class="absolute bottom-[5%] left-[30%] w-1 h-1 bg-softRed rounded-full opacity-70"></div>
+                    <div class="absolute bottom-[10%] left-[70%] w-1 h-1 bg-softRed rounded-full opacity-50"></div>
+
+                    <!-- Left Cluster -->
+                    <div class="absolute top-[45%] left-0 w-2 h-2 bg-softRed rounded-full opacity-40"></div>
+                    <div class="absolute top-[20%] left-[5%] w-1 h-1 bg-softRed rounded-full opacity-60"></div>
+                    <div class="absolute bottom-[30%] left-[2%] w-1.5 h-1.5 bg-softRed rounded-full opacity-80"></div>
+
+                    <!-- Random Scatters -->
+                    <div class="absolute top-[15%] right-[20%] w-0.5 h-0.5 bg-softRed rounded-full opacity-80"></div>
+                    <div class="absolute bottom-[25%] left-[20%] w-0.5 h-0.5 bg-softRed rounded-full opacity-60"></div>
+                    <div class="absolute top-[80%] right-[80%] w-1 h-1 bg-softRed rounded-full opacity-40"></div>
+                    <div class="absolute top-[10%] left-[10%] w-1 h-1 bg-softRed rounded-full opacity-30"></div>
+                </div>
+
+                <!-- Tick Icon -->
+                <svg class="w-10 h-10 text-white stroke-current check-icon" fill="none" viewBox="0 0 24 24"
+                    stroke-width="3">
+                    <path class="draw-path" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+            </div>
+
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Thank you for choosing Us!</h3>
+            <p class="text-black font-medium">Our staff will connect with you soon.</p>
+        </div>
+    </div>
 </body>
 
 </html>

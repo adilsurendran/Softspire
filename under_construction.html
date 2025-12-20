@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction | Softspire</title>
+    <link rel="icon" href="./assets/images/fav.png" type="image/png">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        softRed: "rgb(238, 47, 80)",
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+            /* Prevent scroll */
+        }
+
+        /* Caution Tape Pattern */
+        .caution-tape {
+            background: repeating-linear-gradient(45deg,
+                    rgb(238, 47, 80),
+                    rgb(238, 47, 80) 30px,
+                    #000 30px,
+                    #000 60px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            width: 140%;
+            /* wider than screen to cover rotation */
+            height: 60px;
+            position: absolute;
+            z-index: 10;
+        }
+
+        /* Responsive text sizes with clamp and Media Queries */
+        .big-text {
+            font-size: clamp(2.5rem, 10vw, 5rem);
+            font-weight: 900;
+        }
+
+        .coming-soon {
+            font-size: clamp(1.2rem, 8vw, 2rem);
+            font-weight: 700;
+        }
+
+        /* Explicit Media Queries for extra control on small screens */
+        @media (max-width: 640px) {
+            .big-text {
+                font-size: 2rem;
+                line-height: 1;
+            }
+
+            .coming-soon {
+                font-size: 1rem;
+            }
+
+            .caution-tape {
+                height: 40px;
+                width: 160%;
+                background: repeating-linear-gradient(45deg,
+                        rgb(238, 47, 80),
+                        rgb(238, 47, 80) 20px,
+                        #000 20px,
+                        #000 40px);
+            }
+
+            /* Adjust mobile strip positions so they are visible but don't overlap text too much */
+            .tape-tl-1 {
+                top: 15% !important;
+                left: -20% !important;
+            }
+
+            .tape-tl-2 {
+                top: 18% !important;
+                left: -30% !important;
+            }
+
+            .tape-br-1 {
+                bottom: 15% !important;
+                right: -20% !important;
+            }
+
+            .tape-br-2 {
+                bottom: 18% !important;
+                right: -30% !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white h-screen w-screen flex items-center justify-center relative overflow-hidden">
+
+    <!-- ---------------- NAVBAR ---------------- -->
+    <nav class="w-full fixed top-0 left-0 z-50 bg-white shadow">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 py-4 flex justify-between items-center">
+            <div class="logo-box">
+                <img src="/assets/images/PNG-1.png" alt="Softspire Logo">
+            </div>
+
+            <div class="hidden lg:flex items-center gap-8 text-lg font-medium">
+                <a href="index.html" class="nav-link hover:text-softRed">Home</a>
+                <a href="under_construction.html" class="nav-link hover:text-softRed">About</a>
+
+                <div class="relative group">
+                    <button class="hover:text-softRed flex items-center gap-1">
+                        Services <span class="text-xs mt-[2px]">▾</span>
+                    </button>
+
+                    <div class="dropdown-menu absolute left-0 top-full w-72 softRed-gradient text-white 
+                      shadow-2xl rounded-2xl py-4 backdrop-blur-md bg-opacity-90 
+                      opacity-0 invisible">
+
+                        <a href="under_construction.html" class="dropdown-item block px-6 py-3 text-sm rounded-md">ERP
+                            Development</a>
+                        <a href="under_construction.html" class="dropdown-item block px-6 py-3 text-sm rounded-md">CRM
+                            Systems</a>
+                        <a href="under_construction.html"
+                            class="dropdown-item block px-6 py-3 text-sm rounded-md">Learning Management
+                            Systems</a>
+                        <a href="under_construction.html" class="dropdown-item block px-6 py-3 text-sm rounded-md">Web
+                            Applications</a>
+                        <a href="under_construction.html"
+                            class="dropdown-item block px-6 py-3 text-sm rounded-md">Mobile App Development</a>
+                        <a href="under_construction.html"
+                            class="dropdown-item block px-6 py-3 text-sm rounded-md">E-commerce Solutions</a>
+
+                    </div>
+                </div>
+
+                <a href="under_construction.html" class="nav-link hover:text-softRed">Career</a>
+                <a href="contact.html" class="nav-link hover:text-softRed">Contact Us</a>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="contact.html"
+                    class="px-5 py-2 bg-softRed text-white rounded-full shadow hover:opacity-90 text-lg btn-glow-softRed">Lets
+                    Talk</a>
+            </div>
+
+            <button id="menuBtn" class="text-3xl text-softRed lg:hidden">☰</button>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu fixed top-0 left-0 h-full w-64 bg-white shadow-xl p-6 z-50 lg:hidden">
+
+            <button id="closeMenu" class="text-3xl text-softRed mb-6">✕</button>
+
+            <nav class="flex flex-col gap-6 text-xl">
+                <a href="index.html" class="hover:text-softRed">Home</a>
+                <a href="under_construction.html" class="hover:text-softRed">About</a>
+
+                <div class="w-full">
+                    <button id="servicesBtn"
+                        class="w-full text-left flex justify-between items-center text-softRed font-semibold">
+                        Services
+                        <span id="servicesArrow" class="transition-transform">▾</span>
+                    </button>
+
+                    <div id="servicesMenu"
+                        class="hidden flex flex-col mt-3 gap-1 softRed-gradient text-white rounded-2xl p-4 backdrop-blur-md">
+
+                        <a href="under_construction.html" class="dropdown-item py-2 px-3 rounded-md">ERP Development</a>
+                        <a href="under_construction.html" class="dropdown-item py-2 px-3 rounded-md">CRM Systems</a>
+                        <a href="under_construction.html" class="dropdown-item py-2 px-3 rounded-md">Learning Management
+                            Systems</a>
+                        <a href="under_construction.html" class="dropdown-item py-2 px-3 rounded-md">Web
+                            Applications</a>
+                        <a href="under_construction.html" class="dropdown-item py-2 px-3 rounded-md">Mobile App
+                            Development</a>
+                        <a href="under_construction.html" class="dropdown-item py-2 px-3 rounded-md">E-commerce
+                            Solutions</a>
+
+                    </div>
+                </div>
+
+                <a href="under_construction.html" class="hover:text-softRed">Career</a>
+                <a href="contact.html" class="hover:text-softRed">Contact Us</a>
+
+                <a class="px-4 py-2 bg-softRed text-white rounded-full w-fit mt-2">Lets Talk</a>
+            </nav>
+        </div>
+
+    </nav>
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Top Left Tapes -->
+    <div class="caution-tape tape-tl-1 -rotate-12 top-[-20px] left-[-10%] md:top-[12%] md:left-[-15%]"></div>
+    <div class="caution-tape tape-tl-2 rotate-6 top-[5%] left-[-15%] md:top-[-2%] md:left-[-10%] opacity-90"></div>
+
+    <!-- Main Content -->
+    <div class="text-center z-20 px-6 max-w-full">
+        <h1 class="big-text font-black text-black leading-[0.9] md:leading-tight uppercase break-words">
+            Under<br>Construction
+        </h1>
+        <p class="coming-soon font-bold text-softRed mt-4 uppercase tracking-[0.2em]">
+            Coming Soon
+        </p>
+    </div>
+
+    <!-- Bottom Right Tapes -->
+    <div class="caution-tape tape-br-1 -rotate-12 bottom-[10%] right-[-15%] md:bottom-[15%] md:right-[-10%]"></div>
+    <div class="caution-tape tape-br-2 rotate-6 bottom-[-5%] right-[-10%] md:bottom-[5%] md:right-[-20%] opacity-90">
+    </div>
+
+</body>
+
+</html>

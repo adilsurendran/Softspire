@@ -236,24 +236,35 @@ document.addEventListener("DOMContentLoaded", function () {
     // =======================
     // NEWSLETTER FORM
     // =======================
+    // =======================
+    // NEWSLETTER FORM
+    // =======================
     const newsletterForm = document.getElementById('unifiedNewsletterForm');
+    const newsletterEmailInput = document.getElementById('newsletterEmailInput');
+
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const btn = newsletterForm.querySelector('button');
-            const userText = btn.innerHTML;
 
-            // Simple visual feedback
-            btn.innerHTML = 'Subscribed!';
-            btn.classList.add('bg-green-600', 'hover:bg-green-700');
-            btn.classList.remove('bg-softRed', 'hover:bg-red-600');
+            if (!newsletterEmailInput) return;
+            const emailVal = newsletterEmailInput.value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-            setTimeout(() => {
-                newsletterForm.reset();
-                btn.innerHTML = userText;
-                btn.classList.remove('bg-green-600', 'hover:bg-green-700');
-                btn.classList.add('bg-softRed', 'hover:bg-red-600');
-            }, 3000);
+            // Remove error style first
+            newsletterEmailInput.classList.remove('border-softRed', 'border-2', 'border-red-500');
+
+            if (!emailVal || !emailPattern.test(emailVal)) {
+                // Invalid
+                newsletterEmailInput.classList.add('border-softRed', 'border-2', 'border-red-500');
+                newsletterEmailInput.focus();
+                return;
+            }
+
+            // Valid - Show Success Modal
+            if (typeof showSuccessModal === 'function') {
+                showSuccessModal();
+            }
+            newsletterEmailInput.value = "";
         });
     }
 
@@ -280,4 +291,135 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+
+    // =======================
+    // CONTACT FORM VALIDATION Logic (Unified Scope)
+    // =======================
+    const contactForm = document.getElementById('contactForm');
+
+    const submitBtn = document.getElementById('submitBtn');
+
+    // Inputs
+    const nameInput = document.getElementById('nameInput');
+    const placeInput = document.getElementById('placeInput');
+    const emailInput = document.getElementById('emailInput');
+    const phoneInput = document.getElementById('phoneInput');
+    const messageInput = document.getElementById('messageInput');
+
+    // SUCCESS MODAL ELEMENTS
+    const successModal = document.getElementById('successModal');
+
+    if (submitBtn) {
+        submitBtn.addEventListener('click', validateAndSubmit);
+    }
+
+    // FAQ Submit Logic
+    const faqSubmitBtn = document.getElementById('faqSubmitBtn');
+    const faqEmailInput = document.getElementById('faqEmailInput');
+
+    if (faqSubmitBtn) {
+        faqSubmitBtn.addEventListener('click', () => {
+            if (!faqEmailInput) return;
+            const emailVal = faqEmailInput.value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Remove error style first
+            faqEmailInput.classList.remove('border-softRed', 'border-2', 'border-red-500');
+
+            if (!emailVal || !emailPattern.test(emailVal)) {
+                // Invalid: Show error style
+                faqEmailInput.classList.add('border-softRed', 'border-2');
+                faqEmailInput.focus();
+                return;
+            }
+
+            // Valid: Show success modal
+            showSuccessModal();
+            faqEmailInput.value = "";
+        });
+    }
+
+    function validateAndSubmit() {
+        let isValid = true;
+
+        // Reset all errors
+        document.querySelectorAll('.error-msg').forEach(el => el.classList.add('hidden'));
+        [nameInput, placeInput, emailInput, phoneInput].forEach(inp => {
+            if (inp) inp.classList.remove('border-softRed');
+        });
+
+        // 1. Validate Name (Not empty)
+        if (!nameInput.value.trim()) {
+            showError(nameInput, 'nameError');
+            isValid = false;
+        }
+
+        // 2. Validate Place (Not empty)
+        if (!placeInput.value.trim()) {
+            showError(placeInput, 'placeError');
+            isValid = false;
+        }
+
+        // 3. Validate Email
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailInput.value.trim() || !emailPattern.test(emailInput.value.trim())) {
+            showError(emailInput, 'emailError');
+            isValid = false;
+        }
+
+        // 4. Validate Phone (Simple check: Just digits/symbols, length > 6)
+        // Adjust regex as per strictness required.
+        const phonePattern = /^[\d\+\-\s]{7,15}$/;
+        if (!phoneInput.value.trim() || !phonePattern.test(phoneInput.value.trim())) {
+            showError(phoneInput, 'phoneError');
+            isValid = false;
+        }
+
+        if (isValid) {
+            // Form is valid - Show Success Modal
+            showSuccessModal();
+        }
+    }
+
+    function showError(inputElement, errorId) {
+        inputElement.classList.add('border-softRed');
+        const errorMsg = document.getElementById(errorId);
+        if (errorMsg) errorMsg.classList.remove('hidden');
+    }
+
+    function showSuccessModal() {
+        if (!successModal) return;
+
+        // Show Modal (Ensure flex is applied for centering)
+        successModal.classList.remove('hidden');
+        successModal.classList.add('flex'); // Add flex explicitly to keep centering
+
+        // Force reflow to enable transition
+        void successModal.offsetWidth;
+
+        // Add class to trigger CSS transitions (Opacity/Scale)
+        successModal.classList.add('show');
+
+        // Reset Form
+        if (contactForm) contactForm.reset();
+
+        // Hide after 5 seconds
+        setTimeout(() => {
+            hideSuccessModal();
+        }, 3000);
+    }
+
+    function hideSuccessModal() {
+        if (!successModal) return;
+
+        // Remove class to reverse transitions (starts fade out / scale down)
+        // BUT keep 'flex' so it stays centered!
+        successModal.classList.remove('show');
+
+        // Wait for transition (modified to 500ms for smoothness) before hiding display
+        setTimeout(() => {
+            successModal.classList.remove('flex'); // Remove flex now
+            successModal.classList.add('hidden');
+        }, 500); // 500ms matches the new smoother CSS duration
+    }
 });
