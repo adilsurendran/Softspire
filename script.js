@@ -1,19 +1,3 @@
-
-tailwind.config = {
-    theme: {
-        extend: {
-            colors: {
-                softRed: "rgb(238, 47, 80)",
-                primary: "rgb(238, 47, 80)"
-            },
-            boxShadow: {
-                glow: "0 4px 20px rgba(238, 47, 80, 0.4)",
-                "glow-hover": "0 4px 25px rgba(238, 47, 80, 0.6)",
-            }
-        },
-    }
-};
-
 document.addEventListener("DOMContentLoaded", function () {
     // --- Mobile Menu Logic ---
     const body = document.body;
