@@ -1,11 +1,70 @@
 body {
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
-@layer utilities {
-    .text-shadow-softRed {
-        text-shadow: 0 2px 10px rgba(238, 47, 80, 0.55);
-    }
+/* Bootstrap CSS Variables for Custom Colors */
+:root {
+    --softRed: #EE2F50;
+    --primary: #EE2F50;
+    --bs-primary: #EE2F50;
+    --bs-primary-rgb: 238, 47, 80;
+}
+
+/* Custom Utility Classes */
+.text-shadow-softRed {
+    text-shadow: 0 2px 10px rgba(238, 47, 80, 0.55);
+}
+
+.hover-softRed:hover {
+    color: var(--softRed) !important;
+}
+
+.bg-softRed {
+    background-color: var(--softRed) !important;
+}
+
+.text-softRed {
+    color: var(--softRed) !important;
+}
+
+.border-softRed {
+    border-color: var(--softRed) !important;
+}
+
+.text-primary {
+    color: var(--softRed) !important;
+}
+
+.bg-primary {
+    background-color: var(--softRed) !important;
+}
+
+.bg-primary-hover:hover {
+    background-color: #d62843 !important;
+}
+
+.shadow-glow {
+    box-shadow: 0 0 20px rgba(238, 47, 80, 0.3);
+}
+
+.shadow-glow-hover:hover {
+    box-shadow: 0 0 30px rgba(238, 47, 80, 0.5);
+}
+
+
+.btn-softRed {
+    background-color: var(--softRed) !important;
+    color: white !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-softRed:hover {
+    background-color: #d62843 !important;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(238, 47, 80, 0.5);
 }
 
 .logo-box {
@@ -59,15 +118,21 @@ body {
 }
 
 .dropdown-menu {
+    display: block !important;
+    opacity: 0;
+    visibility: hidden;
     transform-origin: top;
     transform: scaleY(0.95);
-    transition: opacity .25s ease, transform .25s ease;
+    transition: opacity .3s ease, transform .3s ease, visibility .3s ease;
+    pointer-events: none;
 }
 
+.dropdown:hover>.dropdown-menu,
 .group:hover .dropdown-menu {
     opacity: 1 !important;
     visibility: visible !important;
     transform: scaleY(1);
+    pointer-events: auto;
 }
 
 body.no-scroll {
@@ -76,13 +141,111 @@ body.no-scroll {
 }
 
 .mobile-menu {
+    width: 16rem;
     transform: translateX(-100%);
     transition: .3s ease;
     overflow-y: auto;
+    z-index: 1000;
+}
+
+.mobile-menu .dropdown-item {
+    white-space: normal !important;
+}
+
+@media (max-width: 360px) {
+    .mobile-menu {
+        width: 85% !important;
+        padding: 1.5rem !important;
+    }
+
+    .mobile-menu nav {
+        gap: 1.5rem !important;
+    }
+
+    .fs-1 {
+        font-size: 2rem !important;
+    }
+
+    .fs-5 {
+        font-size: 1.15rem !important;
+    }
+
+    .dropdown-item {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
 }
 
 .mobile-menu.open {
     transform: translateX(0);
+}
+
+/* Hero Section Redesign */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.hero-black-bg {
+    background-color: #000000 !important;
+    position: absolute;
+    z-index: 1;
+}
+
+@media (max-width: 1056px) and (min-width: 992px) {
+    .hero-illustration {
+        width: 380px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .hero-black-bg {
+        /* top: -10%; */
+        right: -100px;
+        width: 120%;
+        height: 130%;
+        border-radius: 50% 0 0 50%;
+        transform: scaleY(1.15) translateY(-2%);
+        z-index: 1;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .hero-black-bg {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150%;
+        height: 100%;
+        border-radius: 50% 50% 0 0 / 15% 15% 0 0;
+        z-index: 1;
+    }
+}
+
+.hero-illustration {
+    max-width: 500px;
+    width: 100%;
+    transition: transform 0.5s ease;
+    z-index: 5;
+}
+
+@media (max-width: 1199.98px) {
+    .hero-illustration {
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .hero-illustration {
+        max-width: 350px;
+        margin-top: -2rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-illustration {
+        max-width: 300px;
+    }
 }
 
 .overlay {
@@ -127,6 +290,9 @@ body.no-scroll {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .feature-card:hover {
@@ -134,6 +300,16 @@ body.no-scroll {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(238, 47, 80, 0.05);
     border-color: rgba(238, 47, 80, 0.2);
 }
+
+.feature-card:hover .feature-icon-box {
+    background-color: var(--softRed) !important;
+    color: white !important;
+}
+
+.feature-card:hover .feature-title {
+    color: var(--softRed) !important;
+}
+
 
 /* Scroll Animation */
 .fade-in-up {
@@ -166,6 +342,106 @@ body.no-scroll {
     animation-play-state: paused;
 }
 
+/* Client Card Styling */
+.client-card {
+    transition: all 0.3s;
+}
+
+.client-card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 8px 25px rgba(238, 47, 80, 0.25) !important;
+}
+
+.client-card img {
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.client-card:hover img {
+    transform: scale(1.25);
+}
+
+/* Footer Social Icons */
+.footer-social-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--softRed);
+    color: black !important;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.footer-social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(238, 47, 80, 0.4);
+}
+
+.footer-social-icon svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Floating Action Buttons */
+.fab-whatsapp {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #25D366;
+    color: white !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.fab-whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.fab-whatsapp svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+#scrollTopBtn {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--softRed);
+    color: white;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+#scrollTopBtn.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#scrollTopBtn:hover {
+    transform: scale(1.1);
+    background-color: #d62a48;
+}
+
+#scrollTopBtn svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+
 /* ---------------- TESTIMONIALS ---------------- */
 
 .testimonial-track {
@@ -176,6 +452,8 @@ body.no-scroll {
 .testimonial-card {
     flex: 0 0 100%;
     max-width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 @media (min-width: 768px) {
@@ -193,15 +471,30 @@ body.no-scroll {
 }
 
 /* ---------------- FAQ SECTION ---------------- */
-.faq-question.active .faq-icon {
-    transform: rotate(45deg);
-    /* Turns plus to close icon */
-    background-color: rgb(238, 47, 80);
-    color: white;
+.faq-question {
+    transition: all 0.3s;
 }
 
-.faq-question.active .text-lg {
-    color: rgb(238, 47, 80);
+.faq-item:hover .faq-question span {
+    color: var(--softRed) !important;
+}
+
+.faq-question.active .faq-icon {
+    transform: rotate(45deg);
+    background-color: var(--softRed) !important;
+    color: white !important;
+}
+
+.faq-question.active .faq-icon svg {
+    stroke: white !important;
+}
+
+.faq-question.active span {
+    color: var(--softRed) !important;
+}
+
+.faq-icon {
+    transition: all 0.3s ease;
 }
 
 /* Ensure footer is relative to position the absolute span correctly if needed */

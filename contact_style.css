@@ -289,18 +289,29 @@
     color: #111;
     text-align: left;
     transition: color 0.3s;
+    border: none !important;
+    background: transparent !important;
+}
+
+.faq-btn-minimal:focus,
+.faq-btn-minimal:active,
+.faq-btn-minimal:focus-visible,
+.faq-btn-minimal::-moz-focus-inner {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 
 .faq-btn-minimal:hover {
     color: #EE2F50;
+    background: transparent !important;
 }
 
 .faq-content-minimal {
     max-height: 0;
     overflow: hidden;
-    /* Smoother cubic-bezier for a more natural feel */
-    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.5s ease;
-    opacity: 0;
+    /* Smoother transition matching index.html */
+    transition: max-height 0.5s ease-in-out;
     padding-right: 20px;
 }
 
@@ -309,16 +320,27 @@
     color: #EE2F50;
 }
 
-.faq-btn-minimal.active svg {
+.faq-btn-minimal.active i {
     transform: rotate(180deg);
-    /* optional: rotate icon if desired, or keep as is */
     color: #EE2F50;
 }
 
 /* Open State logic handled via JS setting max-height */
 .faq-content-minimal.open {
-    opacity: 1;
-    padding-bottom: 24px;
+    padding-top: 12px;
+    padding-bottom: 32px;
+}
+
+#faqEmailInput:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: #e5e7eb !important;
+    /* Keep a light border */
+}
+
+#faqSubmitBtn {
+    border: none !important;
+    height: 100% !important;
 }
 
 /* ---------------- FOOTER WRAPPER ---------------- */

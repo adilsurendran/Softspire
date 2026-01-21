@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (servicesBtn) {
         servicesBtn.onclick = () => {
-            servicesMenu.classList.toggle("hidden");
+            servicesMenu.classList.toggle("d-none");
+            servicesMenu.classList.toggle("d-flex");
             servicesArrow.classList.toggle("rotate-180");
         };
     }
@@ -200,19 +201,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     minimalFaqBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Toggle active class
-            btn.classList.toggle('active');
-
-            // Toggle content
             const content = btn.nextElementSibling;
+
+            // Toggle classes once
+            btn.classList.toggle('active');
             content.classList.toggle('open');
 
-            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-                content.style.maxHeight = '0px';
-                content.style.opacity = '0';
+            if (btn.classList.contains('active')) {
+                content.style.maxHeight = (content.scrollHeight + 50) + "px";
             } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-                content.style.opacity = '1';
+                content.style.maxHeight = "0";
             }
         });
     });
@@ -260,9 +258,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // Toggle visibility on scroll
         window.addEventListener('scroll', () => {
             if (window.scrollY > window.innerHeight) {
-                scrollTopBtn.setAttribute('data-visible', 'true');
+                scrollTopBtn.classList.add('show');
             } else {
-                scrollTopBtn.setAttribute('data-visible', 'false');
+                scrollTopBtn.classList.remove('show');
             }
         });
 
