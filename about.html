@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>About Us - Softspire Technologies | Technology Driven Digital Solutions</title>
+    <meta name="title" content="About Us - Softspire Technologies | Technology Driven Digital Solutions">
+    <meta name="description"
+        content="Learn about Softspire Technologies. we are a technology driven company focused on building smart, scalable, and result oriented digital solutions for businesses of all sizes.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/images/fav.png" type="image/png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about_style.css">
+
+</head>
+
+<body class="bg-white text-dark">
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="active">
+        <img src="assets/images/PNG3.png" alt="Softspire" id="splash-logo">
+    </div>
+
+    <!-- ---------------- NAVBAR ---------------- -->
+    <nav class="w-100 fixed-top bg-white shadow">
+        <div class="container-xxl px-4 px-lg-5 py-4 d-flex justify-content-between align-items-center">
+            <div class="logo-box">
+                <a href="index.html">
+                    <img src="/assets/images/PNG-1.png"
+                        alt="Softspire Technologies - Best Software Development Company in UAE and India">
+                </a>
+            </div>
+
+            <div class="d-none d-lg-flex align-items-center gap-4 fs-5 fw-medium">
+                <a href="index.html" class="nav-link hover-softRed text-decoration-none">Home</a>
+                <a href="about.html" class="nav-link active-nav hover-softRed text-decoration-none">About</a>
+
+                <div class="position-relative dropdown group">
+                    <button
+                        class="hover-softRed d-flex align-items-center gap-1 bg-transparent border-0 fs-5 fw-medium">
+                        Services <span class="small mt-1">▾</span>
+                    </button>
+
+                    <div class="dropdown-menu position-absolute start-0 top-100 softRed-gradient text-white 
+                      shadow rounded-4 py-3 px-2"
+                        style="width: 18rem; backdrop-filter: blur(10px); background-color: rgba(238, 47, 80, 0.7) !important;">
+
+                        <a href="#"
+                            class="dropdown-item d-block px-4 py-3 text-white rounded-3 text-decoration-none small">ERP
+                            Development</a>
+                        <a href="#"
+                            class="dropdown-item d-block px-4 py-3 text-white rounded-3 text-decoration-none small">CRM
+                            Systems</a>
+                        <a href="#"
+                            class="dropdown-item d-block px-4 py-3 text-white rounded-3 text-decoration-none small">Learning
+                            Management
+                            Systems</a>
+                        <a href="#"
+                            class="dropdown-item d-block px-4 py-3 text-white rounded-3 text-decoration-none small">Web
+                            Applications</a>
+                        <a href="#"
+                            class="dropdown-item d-block px-4 py-3 text-white rounded-3 text-decoration-none small">Mobile
+                            App Development</a>
+                        <a href="#"
+                            class="dropdown-item d-block px-4 py-3 text-white rounded-3 text-decoration-none small">E-commerce
+                            Solutions</a>
+
+                    </div>
+                </div>
+
+                <a href="#" class="nav-link hover-softRed text-decoration-none">Career</a>
+                <a href="contact.html" class="nav-link hover-softRed text-decoration-none">Contact Us</a>
+            </div>
+
+            <div class="d-none d-lg-flex align-items-center gap-3">
+                <a href="contact.html"
+                    class="px-4 py-2 bg-softRed text-white rounded-pill shadow fs-5 btn-glow-softRed text-decoration-none">Lets
+                    Talk</a>
+            </div>
+
+            <button id="menuBtn" class="fs-1 text-softRed d-lg-none bg-transparent border-0">☰</button>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu position-fixed top-0 start-0 h-100 bg-white shadow p-4 d-lg-none">
+
+            <button id="closeMenu" class="fs-1 text-softRed mb-4 bg-transparent border-0">✕</button>
+
+            <nav class="d-flex flex-column gap-4 fs-5">
+                <a href="index.html" class="hover-softRed text-decoration-none text-black">Home</a>
+                <a href="about.html" class="hover-softRed text-decoration-none text-black">About</a>
+
+                <div class="w-100">
+                    <button id="servicesBtn"
+                        class="w-100 text-start d-flex justify-content-between align-items-center text-softRed fw-semibold bg-transparent border-0">
+                        Services
+                        <span id="servicesArrow" class="transition">▾</span>
+                    </button>
+
+                    <div id="servicesMenu"
+                        class="d-none flex-column mt-3 gap-1 softRed-gradient text-white rounded-4 p-3"
+                        style="backdrop-filter: blur(10px);">
+
+                        <a href="#" class="dropdown-item py-2 px-3 rounded-3 text-white text-decoration-none">ERP
+                            Development</a>
+                        <a href="#" class="dropdown-item py-2 px-3 rounded-3 text-white text-decoration-none">CRM
+                            Systems</a>
+                        <a href="#" class="dropdown-item py-2 px-3 rounded-3 text-white text-decoration-none">Learning
+                            Management
+                            Systems</a>
+                        <a href="#" class="dropdown-item py-2 px-3 rounded-3 text-white text-decoration-none">Web
+                            Applications</a>
+                        <a href="#" class="dropdown-item py-2 px-3 rounded-3 text-white text-decoration-none">Mobile App
+                            Development</a>
+                        <a href="#" class="dropdown-item py-2 px-3 rounded-3 text-white text-decoration-none">E-commerce
+                            Solutions</a>
+
+                    </div>
+                </div>
+
+                <a href="#" class="hover-softRed text-decoration-none text-black">Career</a>
+                <a href="contact.html" class="hover-softRed text-decoration-none text-black">Contact Us</a>
+
+                <a class="px-4 py-2 bg-softRed text-white rounded-pill w-auto mt-2 text-decoration-none d-inline-block">Lets
+                    Talk</a>
+            </nav>
+        </div>
+
+    </nav>
+
+    <div id="overlay" class="overlay"></div>
+
+    <main class="w-100 overflow-hidden" style="padding-top: 5.5rem;">
+
+        <!-- HERO SECTION -->
+        <section class="about-hero position-relative">
+            <div class="accent-shape shape-1"></div>
+            <div class="accent-shape shape-2"></div>
+
+            <!-- Floating Shapes -->
+            <div class="floating-circle circle-1"></div>
+            <div class="floating-circle circle-2"></div>
+            <div class="floating-circle circle-3"></div>
+
+            <div class="container-xxl position-relative" style="z-index: 10;">
+                <div class="row align-items-center g-5">
+                    <!-- Text Side -->
+                    <div class="col-lg-6 fade-in-up">
+                        <span class="text-softRed fw-bold text-uppercase small tracking-widest mb-3 d-block">Who We
+                            Are</span>
+                        <h1 class="display-3 fw-bold text-dark mb-4">About <span
+                                class="text-softRed text-shadow-flow py-2 d-inline-block"
+                                style="filter: drop-shadow(0 0 15px rgba(238,47,80,0.3));">Us</span></h1>
+                        <div class="bg-softRed rounded-pill mb-4" style="width: 5rem; height: 0.35rem;"></div>
+
+                        <p class="fs-4 text-dark fw-medium lh-base mb-4">
+                            We are a technology driven company focused on building smart, scalable, and result
+                            oriented digital solutions for businesses of all sizes.
+                        </p>
+                        <p class="fs-5 text-secondary lh-relaxed mb-4">
+                            Our goal is simple, help brands grow using modern technology, strong digital presence, and
+                            data driven strategies.
+                            We specialize in website development, software solutions, digital marketing, and business
+                            automation.
+                            From startups to established companies, we deliver solutions that improve efficiency,
+                            increase visibility, and drive real revenue.
+                        </p>
+                    </div>
+
+                    <!-- Image Side -->
+                    <div class="col-lg-6 fade-in-up" style="animation-delay: 200ms;">
+                        <div class="about-hero-image-wrapper text-center">
+                            <img src="assets/images/about_hero.png" alt="About Softspire" class="about-hero-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- MISSION & VISION SECTION -->
+        <section class="mission-vision-section">
+            <div class="container-xxl">
+                <div class="row g-5">
+                    <div class="col-lg-6 fade-in-up">
+                        <div class="mission-vision-card">
+                            <div class="d-flex align-items-center gap-3 mb-4">
+                                <div class="bg-softRed p-3 rounded-4">
+                                    <i class="bi bi-rocket-takeoff text-white fs-3"></i>
+                                </div>
+                                <h2 class="h1 fw-bold mb-0">Our Mission</h2>
+                            </div>
+                            <p class="fs-4 text-light opacity-75 lh-relaxed">
+                                To help businesses grow through powerful digital solutions, modern technology, and
+                                performance driven marketing.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 fade-in-up" style="animation-delay: 200ms;">
+                        <div class="mission-vision-card border-white border-opacity-10"
+                            style="background: rgba(255,255,255,0.03);">
+                            <div class="d-flex align-items-center gap-3 mb-4">
+                                <div class="bg-white p-3 rounded-4">
+                                    <i class="bi bi-eye text-black fs-3"></i>
+                                </div>
+                                <h2 class="h1 fw-bold mb-0">Our Vision</h2>
+                            </div>
+                            <p class="fs-4 text-light opacity-75 lh-relaxed">
+                                To become a trusted technology partner for businesses worldwide by delivering reliable,
+                                scalable, and innovative digital products.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PEOPLE WHO TRUST US SECTION -->
+        <section class="trust-section">
+            <div class="container-xxl">
+                <div class="text-center mb-5 fade-in-up">
+                    <span
+                        class="text-softRed fw-bold text-uppercase small tracking-widest mb-2 d-block">Testimonials</span>
+                    <h2 class="display-4 fw-bold text-dark">People Who Trust Us</h2>
+                    <div class="bg-softRed mx-auto rounded-pill mt-4" style="width: 4rem; height: 0.25rem;"></div>
+                </div>
+
+                <div class="client-logo-grid fade-in-up">
+                    <!-- Logo 1 -->
+                    <div class="about-client-card">
+                        <img src="assets/images/client-logo-1.png" alt="Client 1">
+                    </div>
+                    <!-- Logo 2 -->
+                    <div class="about-client-card">
+                        <img src="assets/images/client-logo-2.png" alt="Client 2">
+                    </div>
+                    <!-- Logo 3 -->
+                    <div class="about-client-card">
+                        <img src="assets/images/client-logo-3.png" alt="Client 3">
+                    </div>
+                    <!-- Logo 4 -->
+                    <div class="about-client-card">
+                        <img src="assets/images/client-logo-4.png" alt="Client 4">
+                    </div>
+                    <!-- Logo 5 -->
+                    <div class="about-client-card">
+                        <img src="assets/images/client-logo-5.png" alt="Client 5">
+                    </div>
+                    <!-- Logo 6 -->
+                    <div class="about-client-card">
+                        <img src="assets/images/client-logo-6.png" alt="Client 6">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER SECTION -->
+        <footer id="main-footer" class="position-relative bg-black text-white py-5 overflow-hidden">
+
+            <div class="position-relative container-xxl mx-auto px-4" style="z-index: 10;">
+                <div class="row g-5">
+                    <!-- Column 1: Brand -->
+                    <div class="col-lg-3 d-flex flex-column gap-4">
+                        <span class="h3 fw-bold tracking-tight mb-0 d-block">Softspire</span>
+                        <p class="text-secondary small leading-relaxed m-0" style="max-width: 20rem;">
+                            Empowering businesses with innovative technology solutions since 2024. We transform your
+                            ideas into digital success stories.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="https://www.instagram.com/softspiretechnologies"
+                                class="footer-social-icon d-flex align-items-center justify-content-center bg-softRed text-dark rounded-circle"
+                                style="width: 2.5rem; height: 2.5rem; transition: transform 0.3s; text-decoration: none;">
+                                <i class="bi bi-instagram fs-5"></i>
+                            </a>
+                            <a href="https://www.facebook.com/share/1DuzM6WV4M/"
+                                class="footer-social-icon d-flex align-items-center justify-content-center bg-softRed text-dark rounded-circle"
+                                style="width: 2.5rem; height: 2.5rem; transition: transform 0.3s; text-decoration: none;">
+                                <i class="bi bi-facebook fs-5"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/softspire-technologies/"
+                                class="footer-social-icon d-flex align-items-center justify-content-center bg-softRed text-dark rounded-circle"
+                                style="width: 2.5rem; height: 2.5rem; transition: transform 0.3s; text-decoration: none;">
+                                <i class="bi bi-linkedin fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Company -->
+                    <div class="col-lg-2 offset-lg-1">
+                        <span class="h5 fw-bold text-white mb-4 d-block">Company</span>
+                        <ul class="list-unstyled d-flex flex-column gap-3 small text-secondary">
+                            <li><a href="about.html"
+                                    class="text-reset text-decoration-none hover-softRed transition-all">About
+                                    Us</a></li>
+                            <li><a href="index.html#testimonials"
+                                    class="text-reset text-decoration-none hover-softRed transition-all">Testimonials</a>
+                            </li>
+                            <li><a href="#"
+                                    class="text-reset text-decoration-none hover-softRed transition-all">Careers</a>
+                            </li>
+                            <li><a href="index.html#faq"
+                                    class="text-reset text-decoration-none hover-softRed transition-all">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Services -->
+                    <div class="col-lg-2">
+                        <span class="h5 fw-bold text-white mb-4 d-block">Services</span>
+                        <ul class="list-unstyled d-flex flex-column gap-3 small text-secondary">
+                            <li><a href="#" class="text-reset text-decoration-none hover-softRed transition-all">ERP
+                                    Development</a></li>
+                            <li><a href="#" class="text-reset text-decoration-none hover-softRed transition-all">CRM
+                                    Systems</a></li>
+                            <li><a href="#" class="text-reset text-decoration-none hover-softRed transition-all">Web
+                                    Applications</a></li>
+                            <li><a href="#" class="text-reset text-decoration-none hover-softRed transition-all">Mobile
+                                    Apps</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Contact -->
+                    <div class="col-lg-4 col-xl-3">
+                        <span class="h5 fw-bold text-white mb-4 d-block">Contact</span>
+                        <ul class="list-unstyled d-flex flex-column gap-3 small text-secondary">
+                            <li><a href="tel:+919995562112"
+                                    class="text-reset text-decoration-none hover-softRed transition-all">+91 99955
+                                    62112</a>, <a href="tel:+9710557758634"
+                                    class="text-reset text-decoration-none hover-softRed transition-all">+971 05577
+                                    58634</a></li>
+                            <li><a href="mailto:mail@softspiretechnologies.com"
+                                    class="text-reset text-decoration-none hover-softRed transition-all">mail@softspiretechnologies.com</a>
+                            </li>
+                            <li>Sharjah, UAE</li>
+                            <li>Calicut, Kerala, India</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom Bar -->
+                <div class="mt-5 pt-4 border-top border-secondary d-flex flex-column flex-md-row align-items-center justify-content-between gap-3"
+                    style="border-color: rgba(255,255,255,0.1) !important;">
+                    <p class="text-secondary small mb-0">
+                        &copy; 2024 Softspire Technologies LLC. All rights reserved.
+                    </p>
+                    <div class="d-flex gap-4 small text-secondary">
+                        <a href="#" class="text-reset text-decoration-none hover-softRed transition-all">Privacy
+                            Policy</a>
+                        <a href="#" class="text-reset text-decoration-none hover-softRed transition-all">Terms of
+                            Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Floating Action Buttons -->
+    <div class="position-fixed d-flex flex-column gap-2 align-items-center"
+        style="bottom: 1.5rem; right: 1.5rem; z-index: 1000;">
+        <!-- Scroll To Top -->
+        <button id="scrollTopBtn" class="shadow-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 15l-6-6-6 6"></path>
+            </svg>
+        </button>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/+919995562112" target="_blank" class="fab-whatsapp">
+            <svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+            </svg>
+        </a>
+    </div>
+
+    <!-- Bootstrap 5 JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js" defer></script>
+
+
+</body>
+
+</html>

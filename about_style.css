@@ -1,0 +1,198 @@
+.about-hero {
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.about-hero-image-wrapper {
+    position: relative;
+    z-index: 10;
+}
+
+.about-hero-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+    animation: floatImage 6s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.mission-vision-section {
+    padding: 6rem 0;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+}
+
+.mission-vision-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(238, 47, 80, 0.2);
+    padding: 3rem;
+    border-radius: 2rem;
+    height: 100%;
+    transition: all 0.4s ease;
+}
+
+.mission-vision-card:hover {
+    border-color: var(--softRed);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(238, 47, 80, 0.15);
+}
+
+.trust-section {
+    padding: 6rem 0;
+    background-color: #fff;
+}
+
+.client-logo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 991px) {
+    .client-logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    .client-logo-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.about-client-card {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    height: 160px;
+}
+
+.about-client-card:hover {
+    border-color: var(--softRed);
+    box-shadow: 0 10px 30px rgba(238, 47, 80, 0.1);
+    transform: translateY(-5px);
+}
+
+.about-client-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.about-client-card:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Accent shapes & Floating Elements */
+.accent-shape {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+.shape-1 {
+    top: 10%;
+    left: -5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(238, 47, 80, 0.1) 0%, transparent 70%);
+    animation: floatShape 10s infinite alternate;
+}
+
+.shape-2 {
+    bottom: 10%;
+    right: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(238, 47, 80, 0.05) 0%, transparent 70%);
+    animation: floatShape 15s infinite alternate-reverse;
+}
+
+.floating-circle {
+    position: absolute;
+    background-color: var(--softRed);
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.circle-1 {
+    width: 60px;
+    height: 60px;
+    top: 15%;
+    right: 15%;
+    animation: floatCircle 8s infinite ease-in-out;
+}
+
+.circle-2 {
+    width: 40px;
+    height: 40px;
+    bottom: 20%;
+    left: 10%;
+    animation: floatCircle 12s infinite ease-in-out reverse;
+}
+
+.circle-3 {
+    width: 20px;
+    height: 20px;
+    top: 40%;
+    left: 5%;
+    animation: floatCircle 10s infinite ease-in-out;
+}
+
+@keyframes floatShape {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(30px, 30px) scale(1.1);
+    }
+}
+
+@keyframes floatCircle {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(20px, -30px) scale(1.2);
+    }
+
+    66% {
+        transform: translate(-10px, 20px) scale(0.9);
+    }
+}
