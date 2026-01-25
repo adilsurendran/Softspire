@@ -404,4 +404,58 @@ document.addEventListener("DOMContentLoaded", function () {
             successModal.classList.add('hidden');
         }, 500); // 500ms matches the new smoother CSS duration
     }
+
+    // =======================
+    // PREMIUM SPLASH SCREEN LOGIC
+    // =======================
+    const splashScreen = document.getElementById('splash-screen');
+
+    function hideSplashScreen() {
+        if (!splashScreen) return;
+
+        // Start zoom-out animation on logo
+        splashScreen.classList.add('zoom-out');
+
+        // Start fade-out on container
+        setTimeout(() => {
+            splashScreen.classList.add('fade-out');
+            body.classList.remove('no-scroll');
+        }, 100);
+
+        // Remove from DOM after transition
+        setTimeout(() => {
+            splashScreen.style.display = 'none';
+        }, 900);
+    }
+
+    function showSplashScreen() {
+        if (!splashScreen) return;
+        splashScreen.style.display = 'flex';
+        splashScreen.classList.remove('fade-out', 'zoom-out');
+        void splashScreen.offsetWidth; // Force reflow
+        splashScreen.classList.add('active');
+        body.classList.add('no-scroll');
+    }
+
+    // Trigger on initial page load
+    window.addEventListener('load', () => {
+        // Reduced delay for "silky" feeling, ensuring animation finishes
+        setTimeout(hideSplashScreen, 800);
+    });
+
+    // Navigation Interception for internal links
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+
+            // Check if it's an internal link and not a hash/external
+            if (href && !href.startsWith('#') && !href.startsWith('http') && !link.hasAttribute('target')) {
+                e.preventDefault();
+                showSplashScreen();
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 600); // Match with zoom-in feel
+            }
+        });
+    });
 });
